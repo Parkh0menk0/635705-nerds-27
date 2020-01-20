@@ -1,7 +1,7 @@
 # Личный проект «Нёрдс»
 
 * Студент: [Oleg Parkhomenko](https://up.htmlacademy.ru/htmlcss/27/user/635705).
-* Наставник: `Неизвестно`.
+* Наставник: [Татьяна Симоненко](https://htmlacademy.ru/profile/tatien).
 
 ---
 
