@@ -42,9 +42,86 @@
       <div class="container">
         <div class="search__wrapper">
           <div class="search__form">
-            <form class="form" method="get" action="https://echo.htmlacademy.ru"></form>
+            <form class="filter" method="get" action="https://echo.htmlacademy.ru">
+              <fieldset class="filter__item">
+                <legend>Стоимость:</legend>
+                <div class="filter__range range">
+                  <div class="range__controls">
+                    <div class="range__scale">
+                      <div class="range__bar"></div>
+                    </div>
+                    <div class="range__toggle range__toggle--min"></div>
+                    <div class="range__toggle range__toggle--max"></div>
+                  </div>
+                  <div class="range__price">
+                    <p>
+                      <label class="min-price">от</label>
+                      <input name="min-price" type="text" value="0">
+                    </p>
+                    <p><label class="max-price">до</label>
+                      <input name="max-price" type="text" value="15000">
+                    </p>
+                  </div>
+                </div>
+              </fieldset>
+              <fieldset class="filter__item">
+                <legend>Сетка:</legend>
+                <p>
+                  <input type="radio" id="adaptive-grid" name="grid" value="adaptive" checked>
+                  <label for="adaptive-grid">Адаптивная</label>
+                </p>
+                <p>
+                  <input type="radio" id="fixed-grid" name="grid" value="fixed">
+                  <label for="fixed-grid">Фиксированная</label>
+                </p>
+                <p>
+                  <input type="radio" id="rubber-grid" name="grid" value="rubber">
+                  <label for="rubber-grid">Резиновая</label>
+                </p>
+              </fieldset>
+              <fieldset class="filter__item">
+                <legend>Особенности:</legend>
+                <p>
+                  <input type="checkbox" id="slider-features" name="slider" checked>
+                  <label for="slider-features">Слайдер</label>
+                </p>
+                <p>
+                  <input type="checkbox" id="benefits-block-features" name="benefits-block">
+                  <label for="benefits-block-features">Блок преимуществ</label>
+                </p>
+                <p>
+                  <input type="checkbox" id="news-features" name="news" checked>
+                  <label for="news-features">Новости</label>
+                </p>
+                <p>
+                  <input type="checkbox" id="gallery-features" name="gallery">
+                  <label for="gallery-features">Галерея</label>
+                </p>
+                <p>
+                  <input type="checkbox" id="basket-features" name="basket">
+                  <label for="basket-features">Корзина</label>
+                </p>
+              </fieldset>
+              <button type="submit">Показать</button>
+            </form>
           </div>
           <div class="search__gallery gallery">
+            <div class="gallery__header">
+              <h3 class="search__title">Сортировать:</h3>
+              <div>
+                <button type="button">По цене</button>
+                <button type="button">По типу</button>
+                <button type="button">По названию</button>
+              </div>
+              <div class="gallery__controls">
+                <button class="gallery__control gallery__control--active" type="button">
+                  <img src="https://via.placeholder.com/11x10" alt="По возрастанию" width="11" height="10">
+                </button>
+                <button class="gallery__control" type="button">
+                  <img src="https://via.placeholder.com/11x10" alt="По убыванию" width="11" height="10">
+                </button>
+              </div>
+            </div>
             <ul class="gallery__list">
               <li class="gallery__item product">
                 <img class="product__img" src="https://via.placeholder.com/360x576" alt="" width="360" height="576">
@@ -95,7 +172,12 @@
                 </div>
               </li>
             </ul>
-            <div class="pagination"></div>
+            <div class="pagination">
+              <a class="pagination__item pagination__item--active" href="#1">1</a>
+              <a class="pagination__item" href="#2">2</a>
+              <a class="pagination__item" href="#3">3</a>
+              <a class="pagination__item" href="#next">Следующая</a>
+            </div>
           </div>
         </div>
       </div>
