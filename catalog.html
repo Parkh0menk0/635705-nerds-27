@@ -3,6 +3,7 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="keywords" content="вёрстка, HTML, CSS, Нёрдс">
   <meta name="description" content="Дизайн студия из Краснодара - Нёрдс">
   <title>HTML Academy: Нёрдс &mdash; Магазин</title>
 </head>
@@ -40,7 +41,7 @@
     <div class="container">
       <div class="header__wrapper">
         <a class="header__logo" href="index.html">
-          <img src="img/nerds-logo.svg" alt="Нёрдс" width="160" height="65">
+          <img src="img/files/nerds-logo.svg" alt="Нёрдс" width="160" height="65">
         </a>
         <nav class="nav">
           <ul class="nav__list">
@@ -78,7 +79,7 @@
       <h2 class="visually-hidden">Форма поиска готовых шаблонов</h2>
       <div class="container">
         <div class="search__wrapper">
-          <div class="search__form">
+          <aside class="search__form" role="search">
             <form class="filter" method="get" action="https://echo.htmlacademy.ru">
               <fieldset class="filter__item">
                 <legend>Стоимость:</legend>
@@ -141,33 +142,22 @@
               </fieldset>
               <button type="submit">Показать</button>
             </form>
-          </div>
+          </aside>
           <div class="search__gallery gallery">
-            <div class="gallery__header">
-              <form class="sort" method="get" action="https://echo.htmlacademy.ru">
-                <fieldset class="sort__item">
-                  <legend>Сортировать:</legend>
-                  <p>
-                    <input type="radio" id="by-price-sort" name="sort" value="by-price" checked>
-                    <label for="by-price-sort">По цене</label>
-                  </p>
-                  <p>
-                    <input type="radio" id="by-type-sort" name="sort" value="by-type">
-                    <label for="by-type-sort">По типу</label>
-                  </p>
-                  <p>
-                    <input type="radio" id="by-name-sort" name="sort" value="by-name">
-                    <label for="by-name-sort">По названию</label>
-                  </p>
-                </fieldset>
-              </form>
-              <div class="gallery__controls">
-                <a href="#" class="gallery__control gallery__control--active" aria-label="По возрастанию">
+            <div class="gallery__header sort">
+              <p class="sort__title" role="heading">Сортировать:</p>
+              <div class="sort__buttons">
+                <button type="button" class="sort__button sort__button--active">По цене</button>
+                <button type="button" class="sort__button">По типу</button>
+                <button type="button" class="sort__button">По названию</button>
+              </div>
+              <div class="sort__controls">
+                <a href="#" class="sort__control sort__control--active" aria-label="По возрастанию">
                   <svg role="img" aria-hidden="true" width="11" height="10">
                     <use xlink:href="#icon-down-dir" x="0" y="0"></use>
                   </svg>
                 </a>
-                <a href="#" class="gallery__control" aria-label="По убыванию">
+                <a href="#" class="sort__control" aria-label="По убыванию">
                   <svg role="img" aria-hidden="true" width="11" height="10">
                     <use xlink:href="#icon-up-dir" x="0" y="0"></use>
                   </svg>
@@ -177,8 +167,8 @@
             <ul class="gallery__list">
               <li class="gallery__item product">
                 <picture>
-                  <source type="image/webp" srcset="img/gallery-sedona-desktop@1x.webp 1x">
-                  <img class="product__img" src="img/gallery-sedona-desktop@1x.jpg" alt="Седона" width="360"
+                  <source type="image/webp" srcset="img/files/gallery-sedona-desktop@1x.webp 1x">
+                  <img class="product__img" src="img/files/gallery-sedona-desktop@1x.jpg" alt="Седона" width="360"
                     height="576">
                 </picture>
                 <div class="product__content">
@@ -189,8 +179,9 @@
               </li>
               <li class="gallery__item product">
                 <picture>
-                  <source type="image/webp" srcset="img/gallery-pink-desktop@1x.webp 1x">
-                  <img class="product__img" src="img/gallery-pink-desktop@1x.jpg" alt="Пинк" width="360" height="576">
+                  <source type="image/webp" srcset="img/files/gallery-pink-desktop@1x.webp 1x">
+                  <img class="product__img" src="img/files/gallery-pink-desktop@1x.jpg" alt="Пинк" width="360"
+                    height="576">
                 </picture>
                 <div class="product__content">
                   <h3 class="product__title">Pink App</h3>
@@ -200,9 +191,9 @@
               </li>
               <li class="gallery__item product">
                 <picture>
-                  <source type="image/webp" srcset="img/gallery-barbershop-desktop@1x.webp 1x">
-                  <img class="product__img" src="img/gallery-barbershop-desktop@1x.jpg" alt="Барбершоп" width="360"
-                    height="576">
+                  <source type="image/webp" srcset="img/files/gallery-barbershop-desktop@1x.webp 1x">
+                  <img class="product__img" src="img/files/gallery-barbershop-desktop@1x.jpg" alt="Барбершоп"
+                    width="360" height="576">
                 </picture>
                 <div class="product__content">
                   <h3 class="product__title">Barbershop</h3>
@@ -212,8 +203,8 @@
               </li>
               <li class="gallery__item product">
                 <picture>
-                  <source type="image/webp" srcset="img/gallery-mishka-desktop@1x.webp 1x">
-                  <img class="product__img" src="img/gallery-mishka-desktop@1x.jpg" alt="Мишка" width="360"
+                  <source type="image/webp" srcset="img/files/gallery-mishka-desktop@1x.webp 1x">
+                  <img class="product__img" src="img/files/gallery-mishka-desktop@1x.jpg" alt="Мишка" width="360"
                     height="576">
                 </picture>
                 <div class="product__content">
@@ -224,8 +215,9 @@
               </li>
               <li class="gallery__item product">
                 <picture>
-                  <source type="image/webp" srcset="img/gallery-aplus-desktop@1x.webp 1x">
-                  <img class="product__img" src="img/gallery-aplus-desktop@1x.jpg" alt="АПлюс" width="360" height="576">
+                  <source type="image/webp" srcset="img/files/gallery-aplus-desktop@1x.webp 1x">
+                  <img class="product__img" src="img/files/gallery-aplus-desktop@1x.jpg" alt="АПлюс" width="360"
+                    height="576">
                 </picture>
                 <div class="product__content">
                   <h3 class="product__title">A Plus</h3>
@@ -235,8 +227,9 @@
               </li>
               <li class="gallery__item product">
                 <picture>
-                  <source type="image/webp" srcset="img/gallery-kvast-desktop@1x.webp 1x">
-                  <img class="product__img" src="img/gallery-kvast-desktop@1x.jpg" alt="Кваст" width="360" height="576">
+                  <source type="image/webp" srcset="img/files/gallery-kvast-desktop@1x.webp 1x">
+                  <img class="product__img" src="img/files/gallery-kvast-desktop@1x.jpg" alt="Кваст" width="360"
+                    height="576">
                 </picture>
                 <div class="product__content">
                   <h3 class="product__title">Кваст</h3>
@@ -274,9 +267,8 @@
     <section id="contacts" class="contacts">
       <h2 class="visually-hidden">Наши контакты и координаты</h2>
       <picture>
-        <source type="image/webp" srcset="img/map-desktop@1x.webp 1x">
-        <img src="img/map-desktop@1x.png" alt="191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8" width="1440"
-          height="416">
+        <source type="image/webp" srcset="img/files/map-desktop@1x.webp 1x">
+        <img src="img/files/map-desktop@1x.png" aria-hidden="true" alt="" width="1440" height="416">
       </picture>
       <div class="container">
         <div class="contacts__content">
