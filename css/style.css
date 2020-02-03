@@ -76,3 +76,120 @@ img {
 
   clip-path: inset(100%);
 }
+
+.btn {
+  display: block;
+  user-select: none;
+  cursor: pointer;
+  font-family: "Roboto", "Arial", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 18px;
+  text-transform: uppercase;
+}
+
+.nav__link {
+  color: #000000;
+  font-family: "Roboto", "Arial", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 30px;
+  text-transform: uppercase;
+}
+
+.header__basket {
+  color: #000000;
+  font-family: "Roboto", "Arial", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 30px;
+  text-transform: uppercase;
+}
+
+.catalog-title {
+  color: #000000;
+  font-family: "Roboto", "Arial", sans-serif;
+  font-size: 55px;
+  font-weight: 500;
+  line-height: 55px;
+}
+
+.services__title {
+  color: #000000;
+  font-family: "Roboto", "Arial", sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 30px;
+  text-transform: uppercase;
+}
+
+.services__content {
+  color: #283136;
+  font-family: "Roboto", "Arial", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.services__link {
+  color: #ffffff;
+}
+
+.filter__title {
+  color: #000000;
+  font-family: "Roboto", "Arial", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 30px;
+  text-transform: uppercase;
+}
+
+input[type="radio"] + label,
+input[type="checkbox"] + label {
+  color: #283136;
+  font-family: "Roboto", "Arial", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+.filter__btn {
+  color: #000000;
+}
+
+.product__title {
+  color: #000000;
+  font-family: "Roboto", "Arial", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 30px;
+  text-transform: uppercase;
+}
+
+.product__description {
+  color: #666666;
+  font-family: "Roboto", "Arial", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 18px;
+}
+
+.product__link {
+  color: #ffffff;
+}
+
+.footer__appeal {
+  color: #000000;
+  font-family: "Roboto", "Arial", sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 36px;
+}
+
+.footer__discount {
+  color: #444444;
+  font-family: "Roboto", "Arial", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+}
