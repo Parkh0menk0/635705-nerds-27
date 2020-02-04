@@ -78,118 +78,175 @@ img {
 }
 
 .btn {
-  display: block;
-  user-select: none;
-  cursor: pointer;
   font-family: "Roboto", "Arial", sans-serif;
   font-size: 16px;
   font-weight: 500;
   line-height: 18px;
+
+  display: block;
+
+  cursor: pointer;
+  user-select: none;
   text-transform: uppercase;
+}
+
+.header {
+  background-color: #eee;
 }
 
 .nav__link {
-  color: #000000;
   font-family: "Roboto", "Arial", sans-serif;
   font-size: 16px;
   font-weight: 500;
   line-height: 30px;
+
   text-transform: uppercase;
+
+  color: #000;
 }
 
 .header__basket {
-  color: #000000;
   font-family: "Roboto", "Arial", sans-serif;
   font-size: 16px;
   font-weight: 500;
   line-height: 30px;
+
   text-transform: uppercase;
+
+  color: #000;
 }
 
-.catalog-title {
-  color: #000000;
+.catalog-lead {
+  background-color: #eee;
+}
+
+.catalog-lead__title {
   font-family: "Roboto", "Arial", sans-serif;
   font-size: 55px;
   font-weight: 500;
   line-height: 55px;
+
+  color: #000;
 }
 
 .services__title {
-  color: #000000;
   font-family: "Roboto", "Arial", sans-serif;
   font-size: 24px;
   font-weight: 700;
   line-height: 30px;
+
   text-transform: uppercase;
+
+  color: #000;
 }
 
 .services__content {
-  color: #283136;
   font-family: "Roboto", "Arial", sans-serif;
   font-size: 16px;
   font-weight: 400;
   line-height: 24px;
+
+  color: #283136;
 }
 
 .services__link {
-  color: #ffffff;
+  color: #fff;
+}
+
+.services__link--red {
+  background-color: #fb565a;
+}
+
+.services__link--green {
+  background-color: #00ca74;
+}
+
+.services__link--yellow {
+  background-color: #efc84a;
 }
 
 .filter__title {
-  color: #000000;
   font-family: "Roboto", "Arial", sans-serif;
   font-size: 18px;
   font-weight: 700;
   line-height: 30px;
+
   text-transform: uppercase;
+
+  color: #000;
 }
 
 input[type="radio"] + label,
 input[type="checkbox"] + label {
-  color: #283136;
   font-family: "Roboto", "Arial", sans-serif;
   font-size: 16px;
   font-weight: 400;
   line-height: 20px;
+
+  color: #283136;
 }
 
 .filter__btn {
-  color: #000000;
+  color: #000;
+  background-color: #eee;
+}
+
+.product::before {
+  content: "";
+  background-image: url(../img/browser.svg);
+  display: block;
+  width: 360px;
+  height: 40px;
+  opacity: 0.12;
+}
+
+.product__content {
+  background-color: #eee;
 }
 
 .product__title {
-  color: #000000;
   font-family: "Roboto", "Arial", sans-serif;
   font-size: 18px;
   font-weight: 700;
   line-height: 30px;
+
   text-transform: uppercase;
+
+  color: #000;
 }
 
 .product__description {
-  color: #666666;
   font-family: "Roboto", "Arial", sans-serif;
   font-size: 16px;
   font-weight: 400;
   line-height: 18px;
+
+  color: #666;
 }
 
 .product__link {
-  color: #ffffff;
+  color: #fff;
+  background-color: #fb565a;
+}
+
+.social__item {
+  background-color: #e1e1e1;
 }
 
 .footer__appeal {
-  color: #000000;
   font-family: "Roboto", "Arial", sans-serif;
   font-size: 36px;
   font-weight: 700;
   line-height: 36px;
+
+  color: #000;
 }
 
 .footer__discount {
-  color: #444444;
   font-family: "Roboto", "Arial", sans-serif;
   font-size: 16px;
   font-weight: 400;
   line-height: 22px;
+
+  color: #444;
 }
