@@ -57,6 +57,7 @@ a {
 img {
   max-width: 100%;
   height: auto;
+  pointer-events: none;
 }
 
 .visually-hidden:not(:focus):not(:active) {
@@ -94,6 +95,18 @@ img {
   background-color: #eee;
 }
 
+.header__logo:hover {
+  opacity: 0.8;
+}
+
+.header__logo:active {
+  opacity: 0.3;
+}
+
+.nav__item--active {
+  border-bottom: 2px solid #fb565a;
+}
+
 .nav__link {
   font-family: "Roboto", "Arial", sans-serif;
   font-size: 16px;
@@ -103,6 +116,15 @@ img {
   text-transform: uppercase;
 
   color: #000;
+}
+
+.nav__link:hover:not(span) {
+  color: #fb565a;
+}
+
+.nav__link:active:not(span) {
+  color: #000;
+  opacity: 0.3;
 }
 
 .header__basket {
@@ -157,12 +179,39 @@ img {
   background-color: #fb565a;
 }
 
+.services__link--red:hover {
+  background-color: #e74246;
+}
+
+.services__link--red:active {
+  box-shadow: inset 0 3px 0 rgba(0, 1, 1, 0.1);
+  background-color: #d7373b;
+}
+
 .services__link--green {
   background-color: #00ca74;
 }
 
+.services__link--green:hover {
+  background-color: #00bc6c;
+}
+
+.services__link--green:active {
+  box-shadow: inset 0 3px 0 rgba(0, 1, 1, 0.1);
+  background-color: #00aa62;
+}
+
 .services__link--yellow {
   background-color: #efc84a;
+}
+
+.services__link--yellow:hover {
+  background-color: #eab534;
+}
+
+.services__link--yellow:active {
+  box-shadow: inset 0 3px 0 rgba(0, 1, 1, 0.1);
+  background-color: #e5a722;
 }
 
 .filter__title {
@@ -186,9 +235,32 @@ input[type="checkbox"] + label {
   color: #283136;
 }
 
+input[type="radio"]:hover,
+input[type="checkbox"]:hover,
+input[type="radio"] + label:hover,
+input[type="checkbox"] + label:hover {
+  color: #283136;
+}
+
+input[type="radio"]:active,
+input[type="checkbox"]:active,
+input[type="radio"] + label:active,
+input[type="checkbox"] + label:active {
+  opacity: 0.3;
+}
+
 .filter__btn {
   color: #000;
   background-color: #eee;
+}
+
+.filter__btn:hover {
+  background-color: #dfdfdf;
+}
+
+.filter__btn:active {
+  box-shadow: inset 0 3px 0 rgba(0, 1, 1, 0.1);
+  background-color: #d5d5d5;
 }
 
 .product::before {
@@ -200,7 +272,16 @@ input[type="checkbox"] + label {
   opacity: 0.12;
 }
 
+.product:hover::before {
+  opacity: 1;
+}
+
+.product:hover .product__content {
+  display: block;
+}
+
 .product__content {
+  display: none;
   background-color: #eee;
 }
 
@@ -213,6 +294,15 @@ input[type="checkbox"] + label {
   text-transform: uppercase;
 
   color: #000;
+}
+
+.product__title:hover {
+  color: #fb565a;
+}
+
+.product__title:active {
+  opacity: 0.3;
+  color: #000000;
 }
 
 .product__description {
@@ -229,8 +319,34 @@ input[type="checkbox"] + label {
   background-color: #fb565a;
 }
 
+.product__link:hover {
+  background-color: #e74246;
+}
+
+.product__link:active {
+  box-shadow: inset 0 3px 0 rgba(0, 1, 1, 0.1);
+  background-color: #d7373b;
+}
+
 .social__item {
   background-color: #e1e1e1;
+}
+
+.social__item:hover {
+  background-color: #e74246;
+}
+
+.social__item:active {
+  box-shadow: inset 0 3px 0 rgba(0, 1, 1, 0.1);
+  background-color: #d7373b;
+}
+
+.social__link svg {
+  fill: #fff;
+}
+
+.social__item:active svg {
+  opacity: 0.3;
 }
 
 .footer__appeal {
@@ -249,4 +365,12 @@ input[type="checkbox"] + label {
   line-height: 22px;
 
   color: #444;
+}
+
+.modal {
+  display: none;
+}
+
+.modal-overlay {
+  display: none;
 }
