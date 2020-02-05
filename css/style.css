@@ -57,6 +57,7 @@ a {
 img {
   max-width: 100%;
   height: auto;
+
   pointer-events: none;
 }
 
@@ -79,7 +80,6 @@ img {
 }
 
 .btn {
-  font-family: "Roboto", "Arial", sans-serif;
   font-size: 16px;
   font-weight: 500;
   line-height: 18px;
@@ -108,7 +108,6 @@ img {
 }
 
 .nav__link {
-  font-family: "Roboto", "Arial", sans-serif;
   font-size: 16px;
   font-weight: 500;
   line-height: 30px;
@@ -123,12 +122,11 @@ img {
 }
 
 .nav__link:active:not(span) {
-  color: #000;
   opacity: 0.3;
+  color: #000;
 }
 
 .header__basket {
-  font-family: "Roboto", "Arial", sans-serif;
   font-size: 16px;
   font-weight: 500;
   line-height: 30px;
@@ -138,12 +136,31 @@ img {
   color: #000;
 }
 
+.preview__title {
+  font-size: 55px;
+  font-weight: 500;
+  line-height: 55px;
+
+  color: #000;
+}
+
+.preview__description {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+
+  color: #283136;
+}
+
+.slider__button {
+  color: #fff;
+}
+
 .catalog-lead {
   background-color: #eee;
 }
 
 .catalog-lead__title {
-  font-family: "Roboto", "Arial", sans-serif;
   font-size: 55px;
   font-weight: 500;
   line-height: 55px;
@@ -152,7 +169,6 @@ img {
 }
 
 .services__title {
-  font-family: "Roboto", "Arial", sans-serif;
   font-size: 24px;
   font-weight: 700;
   line-height: 30px;
@@ -163,7 +179,6 @@ img {
 }
 
 .services__content {
-  font-family: "Roboto", "Arial", sans-serif;
   font-size: 16px;
   font-weight: 400;
   line-height: 24px;
@@ -184,8 +199,8 @@ img {
 }
 
 .services__link--red:active {
-  box-shadow: inset 0 3px 0 rgba(0, 1, 1, 0.1);
   background-color: #d7373b;
+  box-shadow: inset 0 3px 0 rgba(0, 1, 1, 0.1);
 }
 
 .services__link--green {
@@ -197,8 +212,8 @@ img {
 }
 
 .services__link--green:active {
-  box-shadow: inset 0 3px 0 rgba(0, 1, 1, 0.1);
   background-color: #00aa62;
+  box-shadow: inset 0 3px 0 rgba(0, 1, 1, 0.1);
 }
 
 .services__link--yellow {
@@ -210,12 +225,69 @@ img {
 }
 
 .services__link--yellow:active {
-  box-shadow: inset 0 3px 0 rgba(0, 1, 1, 0.1);
   background-color: #e5a722;
+  box-shadow: inset 0 3px 0 rgba(0, 1, 1, 0.1);
 }
 
-.filter__title {
-  font-family: "Roboto", "Arial", sans-serif;
+.about__intro {
+  font-size: 45px;
+  font-weight: 500;
+  line-height: 45px;
+
+  color: #000;
+}
+
+.about__description {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+
+  color: #283136;
+}
+
+.about__sked {
+  font-weight: 700;
+
+  text-transform: uppercase;
+
+  color: #000;
+}
+
+.about__item {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+
+  color: #283136;
+}
+
+.table__title {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+
+  text-transform: uppercase;
+
+  color: #000;
+}
+
+.table__row--1 {
+  font-size: 45px;
+  font-weight: 700;
+
+  color: #000;
+}
+
+.table__row--2 {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 18px;
+
+  color: #283136;
+}
+
+.filter__title,
+.sort__title {
   font-size: 18px;
   font-weight: 700;
   line-height: 30px;
@@ -227,7 +299,6 @@ img {
 
 input[type="radio"] + label,
 input[type="checkbox"] + label {
-  font-family: "Roboto", "Arial", sans-serif;
   font-size: 16px;
   font-weight: 400;
   line-height: 20px;
@@ -259,17 +330,35 @@ input[type="checkbox"] + label:active {
 }
 
 .filter__btn:active {
-  box-shadow: inset 0 3px 0 rgba(0, 1, 1, 0.1);
   background-color: #d5d5d5;
+  box-shadow: inset 0 3px 0 rgba(0, 1, 1, 0.1);
+}
+
+.sort__button {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+
+  text-transform: uppercase;
+
+  opacity: 0.3;
+  color: #000;
+}
+
+.sort__button--active {
+  opacity: 1;
 }
 
 .product::before {
-  content: "";
-  background-image: url(../img/browser.svg);
   display: block;
+
   width: 360px;
   height: 40px;
+
+  content: "";
+
   opacity: 0.12;
+  background-image: url(../img/browser.svg);
 }
 
 .product:hover::before {
@@ -282,11 +371,11 @@ input[type="checkbox"] + label:active {
 
 .product__content {
   display: none;
+
   background-color: #eee;
 }
 
 .product__title {
-  font-family: "Roboto", "Arial", sans-serif;
   font-size: 18px;
   font-weight: 700;
   line-height: 30px;
@@ -302,11 +391,10 @@ input[type="checkbox"] + label:active {
 
 .product__title:active {
   opacity: 0.3;
-  color: #000000;
+  color: #000;
 }
 
 .product__description {
-  font-family: "Roboto", "Arial", sans-serif;
   font-size: 16px;
   font-weight: 400;
   line-height: 18px;
@@ -324,8 +412,48 @@ input[type="checkbox"] + label:active {
 }
 
 .product__link:active {
-  box-shadow: inset 0 3px 0 rgba(0, 1, 1, 0.1);
   background-color: #d7373b;
+  box-shadow: inset 0 3px 0 rgba(0, 1, 1, 0.1);
+}
+
+.pagination__link {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 18px;
+
+  text-transform: uppercase;
+
+  color: #000;
+}
+
+.contacts__title {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 30px;
+
+  text-transform: uppercase;
+
+  color: #000;
+}
+
+.contacts__address {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 18px;
+
+  color: #666;
+}
+
+.contacts__tel {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 18px;
+
+  color: #666;
+}
+
+.contacts__btn {
+  color: #fff;
 }
 
 .social__item {
@@ -337,8 +465,8 @@ input[type="checkbox"] + label:active {
 }
 
 .social__item:active {
-  box-shadow: inset 0 3px 0 rgba(0, 1, 1, 0.1);
   background-color: #d7373b;
+  box-shadow: inset 0 3px 0 rgba(0, 1, 1, 0.1);
 }
 
 .social__link svg {
@@ -350,7 +478,6 @@ input[type="checkbox"] + label:active {
 }
 
 .footer__appeal {
-  font-family: "Roboto", "Arial", sans-serif;
   font-size: 36px;
   font-weight: 700;
   line-height: 36px;
@@ -359,7 +486,6 @@ input[type="checkbox"] + label:active {
 }
 
 .footer__discount {
-  font-family: "Roboto", "Arial", sans-serif;
   font-size: 16px;
   font-weight: 400;
   line-height: 22px;

@@ -73,31 +73,41 @@
     <h1 class="visually-hidden">Дизайн студия из Краснодара - Нёрдс</h1>
     <section class="preview slider">
       <h2 class="visually-hidden">Анонс услуг</h2>
-      <div class="container">
-        <div class="slider__controls controls">
-          <i class="controls__item controls__item--active"></i>
-          <i class="controls__item"></i>
-          <i class="controls__item"></i>
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="container">
+              <div class="slider__wrapper">
+                <h3 class="preview__title">Долго, дорого,<br> скрупулезно.</h3>
+                <p class="preview__description">Математически выверенный дизайн<br> для вашего сайта или мобильного
+                  приложения.</p>
+                <a class="btn slider__button" href="#">Узнать больше</a>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="container">
+              <div class="slider__wrapper">
+                <h3 class="preview__title">Любим математику как никто другой</h3>
+                <p class="preview__description">Никакого креатива, только математические формулы для расчета идеальных
+                  пропорций.</p>
+                <a class="btn slider__button" href="#">Узнать больше</a>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="container">
+              <div class="slider__wrapper">
+                <h3 class="preview__title">Только ночь,<br> только хардкор</h3>
+                <p class="preview__description">Работать днем, как все? Мы против этого.<br> Ближе к полуночи работа
+                  только
+                  начинается.</p>
+                <a class="btn slider__button" href="#">Узнать больше</a>
+              </div>
+            </div>
+          </div>
         </div>
-        <ul class="slider__list">
-          <li class="preview__item">
-            <h3 class="preview__title">Долго, дорого,<br> скрупулезно.</h3>
-            <p class="preview__description">Математически выверенный дизайн<br> для вашего сайта или мобильного
-              приложения.</p>
-            <a class="btn slider__button" href="#">Узнать больше</a>
-          </li>
-          <li class="preview__item">
-            <h3 class="preview__title">Любим математику как никто другой</h3>
-            <p class="preview__description">Никакого креатива, только математические формулы для расчета идеальных
-              пропорций.</p>
-            <a class="btn slider__button" href="#">Узнать больше</a>
-          </li>
-          <li class="preview__item">
-            <h3 class="preview__title">Только ночь,<br> только хардкор</h3>
-            <p class="preview__description">Работать днем, как все? Мы против этого.<br> Ближе к полуночи работа только
-              начинается.</p>
-            <a class="btn slider__button" href="#">Узнать больше</a>
-        </ul>
+        <div class="swiper-pagination"></div>
       </div>
     </section>
     <!-- /.preview -->
@@ -134,7 +144,7 @@
             <b class="about__intro">Мы — маленькая, но гордая дизайн-студия из Краснодара.</b>
             <p class="about__description">Исповедуем принципы минимализма и чистоты. Ставим математический расчет
               превыше креатива. Работаем не покладая рук, как роботы.</p>
-            <p>Выполняем заказы на разработку:</p>
+            <p class="about__sked">Выполняем заказы на разработку:</p>
             <ul class="about__list">
               <li class="about__item">Веб-сайтов любой сложности</li>
               <li class="about__item">Мобильных приложений для iOS и Android</li>
@@ -146,17 +156,17 @@
               <source type="image/webp" srcset="img/files/nerds-illustration-desktop@1x.webp 1x">
               <img src="img/files/nerds-illustration-desktop@1x.png" aria-hidden="true" alt="" width="360" height="208">
             </picture>
-            <table>
-              <caption>с 2004 года Любим точность во всем:</caption>
-              <tr>
-                <td>146<sup>%</sup></td>
-                <td>100<sup>%</sup></td>
-                <td>50<sup>%</sup></td>
+            <table class="about__table table">
+              <caption class="table__title">с 2004 года Любим точность во всем:</caption>
+              <tr class="table__row table__row--1">
+                <td class="table__column table__column--1">146<sup>%</sup></td>
+                <td class="table__column table__column--2">100<sup>%</sup></td>
+                <td class="table__column table__column--3">50<sup>%</sup></td>
               </tr>
-              <tr>
-                <td>Уровень самоотдачи</td>
-                <td>Соблюдение сроков</td>
-                <td>Минимальная предоплата</td>
+              <tr class="table__row table__row--2">
+                <td class="table__column table__column--1">Уровень самоотдачи</td>
+                <td class="table__column table__column--2">Соблюдение сроков</td>
+                <td class="table__column table__column--3">Минимальная предоплата</td>
               </tr>
             </table>
           </div>
@@ -219,11 +229,11 @@
       <div class="container">
         <div class="contacts__content">
           <h3 class="contacts__title">NЁRDS DESIGN STUDIO</h3>
-          <a
+          <a class="contacts__address"
             href="https://www.google.com/maps/place/%D0%91%D0%BE%D0%BB%D1%8C%D1%88%D0%B0%D1%8F+%D0%9A%D0%BE%D0%BD%D1%8E%D1%88%D0%B5%D0%BD%D0%BD%D0%B0%D1%8F+%D1%83%D0%BB.,+19%2F8,+%D0%A1%D0%B0%D0%BD%D0%BA%D1%82-%D0%9F%D0%B5%D1%82%D0%B5%D1%80%D0%B1%D1%83%D1%80%D0%B3,+%D0%A0%D0%BE%D1%81%D1%81%D0%B8%D1%8F,+191186/@59.9387165,30.3208587,17z/data=!3m1!4b1!4m5!3m4!1s0x4696310fca145cc1:0x42b32648d8238007!8m2!3d59.9387165!4d30.3230474">191186,
             Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</a>
-          <a href="tel:+78122757575">тел. +7 (812) 275-75-75</a>
-          <a href="mailto:name@email.com">Напишите нам</a>
+          <a class="contacts__tel" href="tel:+78122757575">тел. +7 (812) 275-75-75</a>
+          <a class="contacts__btn btn" href="mailto:name@email.com">Напишите нам</a>
         </div>
       </div>
     </section>
