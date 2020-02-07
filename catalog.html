@@ -157,22 +157,24 @@
           <div class="search__gallery gallery">
             <div class="gallery__header sort">
               <p class="sort__title" role="heading">Сортировать:</p>
-              <div class="sort__buttons">
-                <button type="button" class="btn sort__button sort__button--active">По цене</button>
-                <button type="button" class="btn sort__button">По типу</button>
-                <button type="button" class="btn sort__button">По названию</button>
-              </div>
-              <div class="sort__controls">
-                <a href="#" class="btn sort__control sort__control--active" aria-label="По возрастанию">
-                  <svg role="img" aria-hidden="true" width="11" height="10">
-                    <use xlink:href="#icon-down-dir" x="0" y="0"></use>
-                  </svg>
-                </a>
-                <a href="#" class="btn sort__control" aria-label="По убыванию">
-                  <svg role="img" aria-hidden="true" width="11" height="10">
-                    <use xlink:href="#icon-up-dir" x="0" y="0"></use>
-                  </svg>
-                </a>
+              <div class="sort__wrapper">
+                <div class="sort__buttons">
+                  <button type="button" class="btn sort__button sort__button--active">По цене</button>
+                  <button type="button" class="btn sort__button">По типу</button>
+                  <button type="button" class="btn sort__button">По названию</button>
+                </div>
+                <div class="sort__controls">
+                  <a href="#" class="btn sort__control sort__control--active" aria-label="По возрастанию">
+                    <svg role="img" aria-hidden="true" width="11" height="10">
+                      <use xlink:href="#icon-down-dir" x="0" y="0"></use>
+                    </svg>
+                  </a>
+                  <a href="#" class="btn sort__control" aria-label="По убыванию">
+                    <svg role="img" aria-hidden="true" width="11" height="10">
+                      <use xlink:href="#icon-up-dir" x="0" y="0"></use>
+                    </svg>
+                  </a>
+                </div>
               </div>
             </div>
             <ul class="gallery__list">
@@ -249,23 +251,23 @@
                 </picture>
               </li>
             </ul>
-            <ul class="pagination">
-              <li class="pagination__item pagination__item--active" aria-current="page">
-                <a class="btn pagination__link">
-                  <span class="visually-hidden">Текущий пункт:</span>
-                  1
-                </a>
-              </li>
-              <li class="pagination__item">
-                <a class="btn pagination__link" href="#2">2</a>
-              </li>
-              <li class="pagination__item">
-                <a class="btn pagination__link" href="#3">3</a>
-              </li>
-              <li class="pagination__item pagination__item--next">
-                <a class="btn pagination__link" href="#next">Следующая</a>
-              </li>
-            </ul>
+            <div class="pagination">
+              <ul class="pagination__list">
+                <li class="pagination__item pagination__item--active" aria-current="page">
+                  <a class="btn pagination__link">
+                    <span class="visually-hidden">Текущий пункт:</span>
+                    1
+                  </a>
+                </li>
+                <li class="pagination__item">
+                  <a class="btn pagination__link" href="#2">2</a>
+                </li>
+                <li class="pagination__item">
+                  <a class="btn pagination__link" href="#3">3</a>
+                </li>
+              </ul>
+              <button class="pagination__btn btn" type="button">Следующая</button>
+            </div>
           </div>
         </div>
       </div>
