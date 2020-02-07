@@ -181,6 +181,14 @@ img {
   width: 41px;
 }
 
+.header__basket svg {
+  display: block;
+
+  user-select: none;
+
+  fill: #a6a6a6;
+}
+
 .preview {
   background-color: #eee;
 }
@@ -191,6 +199,7 @@ img {
 
 .preview__wrapper {
   background-repeat: no-repeat;
+  background-position: right 0;
 }
 
 .preview__wrapper--1 {
@@ -222,7 +231,7 @@ img {
 }
 
 .slider__btn {
-  color: #fff;
+  width: 240px;
 }
 
 .swiper-slide {
@@ -311,6 +320,8 @@ img {
   font-weight: 500;
   line-height: 18px;
 
+  width: 160px;
+
   color: #fff;
 }
 
@@ -340,6 +351,18 @@ img {
   box-shadow: inset 0 3px 0 rgba(0, 1, 1, 0.1);
 }
 
+.about__wrapper {
+  display: flex;
+  flex-direction: row;
+
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.about__content {
+  width: 660px;
+}
+
 .about__intro {
   font-size: 45px;
   font-weight: 500;
@@ -364,12 +387,23 @@ img {
   color: #000;
 }
 
+.about__list {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
 .about__item {
   font-size: 16px;
   font-weight: 400;
   line-height: 24px;
 
   color: #283136;
+}
+
+.about__statistics {
+  width: 360px;
 }
 
 .table__title {
@@ -526,6 +560,22 @@ input[type="checkbox"] + label:active {
   color: #666;
 }
 
+.partners__list {
+  display: flex;
+  flex-direction: row;
+
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+
+  border-top: 2px solid #eee;
+  border-bottom: 2px solid #eee;
+
+  justify-content: space-around;
+  align-items: center;
+}
+
 .partners__link {
   display: block;
 
@@ -587,6 +637,16 @@ input[type="checkbox"] + label:active {
   color: #000;
 }
 
+.contacts {
+  background-color: #e9e5dc;
+}
+
+.contacts__content {
+  width: 320px;
+
+  background-color: #fff;
+}
+
 .contacts__title {
   font-size: 18px;
   font-weight: 700;
@@ -603,6 +663,10 @@ input[type="checkbox"] + label:active {
   line-height: 18px;
 
   color: #666;
+}
+
+.contacts__btn {
+  width: 219px;
 }
 
 .footer__wrapper {
