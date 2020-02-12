@@ -120,14 +120,6 @@ img {
   background-color: #eee;
 }
 
-.header__wrapper {
-  display: flex;
-  flex-direction: row;
-
-  justify-content: space-between;
-  align-items: center;
-}
-
 .header__logo {
   width: 160px;
   height: 65px;
@@ -144,10 +136,15 @@ img {
 }
 
 .nav {
-  width: 291px;
+  display: flex;
+  flex-direction: row;
+
+  justify-content: space-between;
+  align-items: center;
 }
 
 .nav__list {
+  width: 291px;
   margin: 0;
   padding: 0;
 

@@ -44,36 +44,35 @@
 
   <header class="header">
     <div class="container">
-      <div class="header__wrapper">
+      <nav class="nav" aria-labelledby="nav-heading">
+        <h2 id="nav-heading" class="visually-hidden">Хедер сайта</h2>
         <a class="header__logo" href="index.html">
           <img src="img/files/nerds-logo.svg" alt="Нёрдс" width="160" height="65">
         </a>
-        <nav class="nav">
-          <ul class="nav__list">
-            <li class="nav__item">
-              <a class="header__link nav__link" href="#">Студия</a>
-            </li>
-            <li class="nav__item">
-              <a class="header__link nav__link" href="#">Клиенты</a>
-            </li>
-            <li class="nav__item nav__item--active" aria-current="page">
-              <a class="header__link nav__link">
-                <span class="visually-hidden">Текущий пункт:</span>
-                Магазин
-              </a>
-            </li>
-            <li class="nav__item">
-              <a class="header__link nav__link" href="#contacts">Контакты</a>
-            </li>
-          </ul>
-        </nav>
+        <ul class="nav__list" role="menu">
+          <li class="nav__item" role="menuitem">
+            <a class="header__link nav__link" href="#">Студия</a>
+          </li>
+          <li class="nav__item" role="menuitem">
+            <a class="header__link nav__link" href="#">Клиенты</a>
+          </li>
+          <li class="nav__item nav__item--active" role="menuitem" aria-current="page">
+            <a class="header__link nav__link">
+              <span class="visually-hidden">Текущий пункт:</span>
+              Магазин
+            </a>
+          </li>
+          <li class="nav__item" role="menuitem">
+            <a class="header__link nav__link" href="#contacts">Контакты</a>
+          </li>
+        </ul>
         <a href="#" class="header__link header__basket">
           <svg role="img" aria-hidden="true" width="15" height="15">
             <use xlink:href="#icon-cart" x="0" y="0"></use>
           </svg>
           Корзина
         </a>
-      </div>
+      </nav>
     </div>
   </header>
   <!-- /.header -->
@@ -86,8 +85,8 @@
     </div>
     <!-- /.catalog-lead -->
 
-    <section class="search">
-      <h2 class="visually-hidden">Форма поиска готовых шаблонов</h2>
+    <section class="search" aria-labelledby="search">
+      <h2 id="search" class="visually-hidden">Форма поиска готовых шаблонов</h2>
       <div class="container">
         <div class="search__wrapper">
           <aside class="search__form filter" role="search">
@@ -158,10 +157,10 @@
             <div class="gallery__header sort">
               <p class="sort__title" role="heading">Сортировать:</p>
               <div class="sort__wrapper">
-                <div class="sort__buttons">
-                  <button type="button" class="btn sort__button sort__button--active">По цене</button>
-                  <button type="button" class="btn sort__button">По типу</button>
-                  <button type="button" class="btn sort__button">По названию</button>
+                <div class="sort__buttons" role="menu">
+                  <button type="button" class="btn sort__button sort__button--active" role="menuitemradio" aria-checked="true">По цене</button>
+                  <button type="button" class="btn sort__button" role="menuitemradio">По типу</button>
+                  <button type="button" class="btn sort__button" role="menuitemradio">По названию</button>
                 </div>
                 <div class="sort__controls">
                   <a href="#" class="btn sort__control sort__control--active" aria-label="По возрастанию">
@@ -277,8 +276,8 @@
   <!-- /.main -->
 
   <footer class="footer">
-    <section id="contacts" class="contacts">
-      <h2 class="visually-hidden">Наши контакты и координаты</h2>
+    <section class="contacts" aria-labelledby="contacts">
+      <h2 id="contacts" class="visually-hidden">Наши контакты и координаты</h2>
       <picture>
         <source type="image/webp" srcset="img/files/map-desktop@1x.webp 1x">
         <img src="img/files/map-desktop@1x.png" aria-hidden="true" alt="" width="1440" height="416">
@@ -340,22 +339,22 @@
   </footer>
   <!-- /.footer -->
 
-  <section class="modal">
-    <h2 class="modal__title">Напишите нам</h2>
-    <form class="catalog-form modal__form" action="https://echo.htmlacademy.ru" method="post">
+  <section class="modal" aria-labelledby="write-us">
+    <h2 id="write-us" class="modal__title">Напишите нам</h2>
+    <form class="index-form modal__form" action="https://echo.htmlacademy.ru" method="post">
       <p>
-        <label for="catalog-form-name" class="modal__name">Ваше имя:</label>
-        <input id="catalog-form-name" type="text" name="name" placeholder="Имя Фамилия" autocomplete="on"
+        <label for="index-form-name" class="modal__name">Ваше имя:</label>
+        <input id="index-form-name" type="text" name="name" placeholder="Имя Фамилия" autocomplete="on"
           aria-required="true">
       </p>
       <p>
-        <label id="label-mail" for="catalog-form-email" class="modal__email">Ваш e-mail:</label>
-        <input id="catalog-form-email" aria-labelledby="label-mail" type="email" name="email"
+        <label id="label-mail" for="index-form-email" class="modal__email">Ваш e-mail:</label>
+        <input id="index-form-email" aria-labelledby="label-mail" type="email" name="email"
           placeholder="email@example.com" autocomplete="on" aria-required="true">
       </p>
       <p>
-        <label for="catalog-form-letter" class="modal__question">Текст письма:</label>
-        <textarea id="catalog-form-letter" name="question" placeholder="В свободной форме" autocomplete="on"
+        <label for="index-form-letter" class="modal__question">Текст письма:</label>
+        <textarea id="index-form-letter" name="question" placeholder="В свободной форме" autocomplete="on"
           aria-required="true"></textarea>
       </p>
       <button type="submit" class="btn">Отправить</button>
