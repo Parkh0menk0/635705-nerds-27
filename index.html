@@ -5,6 +5,10 @@
   <meta charset="utf-8">
   <meta name="keywords" content="вёрстка, HTML, CSS, Нёрдс">
   <meta name="description" content="Дизайн студия из Краснодара - Нёрдс">
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/icon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/icon-16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="manifest" href="manifest.json">
   <title>HTML Academy: Нёрдс</title>
   <link rel="preload" href="./fonts/roboto.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   <link rel="preload" href="./fonts/robotobold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
@@ -32,6 +36,9 @@
       <symbol id="icon-insta" viewBox="0 0 21 21">
         <path
           d="M18 0H3C1.35 0 0 1.35 0 3v15c0 1.65 1.35 3 3 3h15c1.65 0 3-1.35 3-3V3c0-1.65-1.35-3-3-3zm-7.5 7c1.93 0 3.5 1.57 3.5 3.5S12.43 14 10.5 14 7 12.43 7 10.5 8.57 7 10.5 7zM18 18H3V9h1.181A6.504 6.504 0 0 0 4 10.5a6.5 6.5 0 1 0 13 0 6.45 6.45 0 0 0-.181-1.5H18v9zm0-11h-4V3h4v4z" />
+      </symbol>
+      <symbol id="icon-cross" viewBox="0 0 21 21">
+        <path d="M13.328 10.5l7.371-7.371a1.003 1.003 0 0 0 0-1.414L19.285.3a1.003 1.003 0 0 0-1.414 0L10.5 7.672 3.129.301a1.003 1.003 0 0 0-1.414 0L.301 1.715a1.003 1.003 0 0 0 0 1.414L7.672 10.5.301 17.871a1.003 1.003 0 0 0 0 1.414l1.415 1.414a1.003 1.003 0 0 0 1.414 0l7.371-7.371 7.371 7.371a1.003 1.003 0 0 0 1.414 0l1.414-1.414a1.003 1.003 0 0 0 0-1.414L13.328 10.5z" />
       </symbol>
     </svg>
   </div>
@@ -302,8 +309,10 @@
       </p>
       <button type="submit" class="btn">Отправить</button>
     </form>
-    <button class="modal__close" type="button">
-      <span class="visually-hidden">Закрыть</span>
+    <button class="modal__close" type="button" aria-label="Закрыть">
+      <svg role="img" aria-hidden="true" width="21" height="21">
+        <use xlink:href="#icon-cross" x="0" y="0"></use>
+      </svg>
     </button>
   </section>
   <!-- /.modal -->

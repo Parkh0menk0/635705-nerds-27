@@ -200,15 +200,15 @@ img {
 }
 
 .preview__wrapper--1 {
-  background-image: url(../img/slide1-desktop@1x.png);
+  background-image: url("../img/files/slide1-desktop@1x.png");
 }
 
 .preview__wrapper--2 {
-  background-image: url(../img/slide2-desktop@1x.png);
+  background-image: url("../img/files/slide2-desktop@1x.png");
 }
 
 .preview__wrapper--3 {
-  background-image: url(../img/slide3-desktop@1x.png);
+  background-image: url("../img/files/slide3-desktop@1x.png");
 }
 
 .preview__title {
@@ -283,15 +283,15 @@ img {
 }
 
 .services__item--web::before {
-  background-image: url(../img/services-web-sites-desktop@1x.png);
+  background-image: url("../img/files/services-web-sites-desktop@1x.png");
 }
 
 .services__item--app::before {
-  background-image: url(../img/services-app-desktop@1x.png);
+  background-image: url("../img/files/services-app-desktop@1x.png");
 }
 
 .services__item--pres::before {
-  background-image: url(../img/services-presentation-desktop@1x.png);
+  background-image: url("../img/files/services-presentation-desktop@1x.png");
 }
 
 .services__title {
@@ -446,11 +446,11 @@ img {
   align-items: center;
 }
 
-.filter__item {
+.filter-form__fieldset {
   border: none;
 }
 
-.filter__title,
+.filter-form__legend,
 .sort__title {
   font-size: 18px;
   font-weight: 700;
@@ -488,7 +488,7 @@ input[type="checkbox"] + label:active {
   opacity: 0.3;
 }
 
-.filter__btn {
+.filter-form__btn {
   font-size: 16px;
   font-weight: 500;
   line-height: 18px;
@@ -497,11 +497,11 @@ input[type="checkbox"] + label:active {
   background-color: #eee;
 }
 
-.filter__btn:hover {
+.filter-form__btn:hover {
   background-color: #dfdfdf;
 }
 
-.filter__btn:active {
+.filter-form__btn:active {
   background-color: #d5d5d5;
   box-shadow: inset 0 3px 0 rgba(0, 1, 1, 0.1);
 }
@@ -569,7 +569,7 @@ input[type="checkbox"] + label:active {
   content: "";
 
   opacity: 0.12;
-  background-image: url(../img/browser.svg);
+  background-image: url("../img/browser.svg");
 }
 
 .product:hover::before {
@@ -653,7 +653,7 @@ input[type="checkbox"] + label:active {
   align-items: flex-start;
 }
 
-.filter {
+.filter-form {
   width: 260px;
 }
 

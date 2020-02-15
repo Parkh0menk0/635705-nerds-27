@@ -5,6 +5,10 @@
   <meta charset="utf-8">
   <meta name="keywords" content="вёрстка, HTML, CSS, Нёрдс">
   <meta name="description" content="Дизайн студия из Краснодара - Нёрдс">
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/icon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/icon-16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="manifest" href="manifest.json">
   <title>HTML Academy: Нёрдс &mdash; Магазин</title>
   <link rel="preload" href="./fonts/roboto.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   <link rel="preload" href="./fonts/robotobold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
@@ -38,6 +42,9 @@
       </symbol>
       <symbol id="icon-down-dir" viewBox="0 0 11 10">
         <path d="M5.5 10L0 0h11" />
+      </symbol>
+      <symbol id="icon-cross" viewBox="0 0 21 21">
+        <path d="M13.328 10.5l7.371-7.371a1.003 1.003 0 0 0 0-1.414L19.285.3a1.003 1.003 0 0 0-1.414 0L10.5 7.672 3.129.301a1.003 1.003 0 0 0-1.414 0L.301 1.715a1.003 1.003 0 0 0 0 1.414L7.672 10.5.301 17.871a1.003 1.003 0 0 0 0 1.414l1.415 1.414a1.003 1.003 0 0 0 1.414 0l7.371-7.371 7.371 7.371a1.003 1.003 0 0 0 1.414 0l1.414-1.414a1.003 1.003 0 0 0 0-1.414L13.328 10.5z" />
       </symbol>
     </svg>
   </div>
@@ -86,89 +93,96 @@
     <!-- /.catalog-lead -->
 
     <section class="search" aria-labelledby="search">
-      <h2 id="search" class="visually-hidden">Форма поиска готовых шаблонов</h2>
+      <h2 id="search" class="visually-hidden">Страница поиска готовых шаблонов</h2>
       <div class="container">
         <div class="search__wrapper">
-          <aside class="search__form filter" role="search">
-            <form class="filter__form" method="get" action="https://echo.htmlacademy.ru">
-              <fieldset class="filter__item">
-                <legend class="filter__title">Стоимость:</legend>
-                <div class="filter__range range">
-                  <div class="range__controls">
-                    <div class="range__scale">
-                      <div class="range__bar"></div>
-                    </div>
-                    <div class="range__toggle range__toggle--min"></div>
-                    <div class="range__toggle range__toggle--max"></div>
+          <form class="filter-form" method="get" action="https://echo.htmlacademy.ru" role="search">
+            <fieldset class="filter-form__fieldset">
+              <legend class="filter-form__legend">Стоимость:</legend>
+              <div class="filter-form__range range">
+                <div class="range__controls">
+                  <div class="range__scale">
+                    <div class="range__bar"></div>
                   </div>
-                  <div class="range__price">
-                    <p>
-                      <label class="min-price">от</label>
-                      <input name="min-price" type="text" value="0">
-                    </p>
-                    <p><label class="max-price">до</label>
-                      <input name="max-price" type="text" value="15000">
-                    </p>
-                  </div>
+                  <div class="range__toggle range__toggle--min"></div>
+                  <div class="range__toggle range__toggle--max"></div>
                 </div>
-              </fieldset>
-              <fieldset class="filter__item">
-                <legend class="filter__title">Сетка:</legend>
-                <p>
+                <div class="range__price">
+                  <p>
+                    <label class="min-price">от</label>
+                    <input name="min-price" type="text" value="0">
+                  </p>
+                  <p><label class="max-price">до</label>
+                    <input name="max-price" type="text" value="15000">
+                  </p>
+                </div>
+              </div>
+            </fieldset>
+            <fieldset class="filter-form__fieldset">
+              <legend class="filter-form__legend">Сетка:</legend>
+              <ul class="filter-form__list" role="listbox">
+                <li class="filter-form__item" role="option">
                   <input type="radio" id="adaptive-grid" name="grid" value="adaptive" checked>
                   <label for="adaptive-grid">Адаптивная</label>
-                </p>
-                <p>
+                </li>
+                <li class="filter-form__item" role="option">
                   <input type="radio" id="fixed-grid" name="grid" value="fixed">
                   <label for="fixed-grid">Фиксированная</label>
-                </p>
-                <p>
+                </li>
+                <li class="filter-form__item" role="option">
                   <input type="radio" id="rubber-grid" name="grid" value="rubber">
                   <label for="rubber-grid">Резиновая</label>
-                </p>
-              </fieldset>
-              <fieldset class="filter__item">
-                <legend class="filter__title">Особенности:</legend>
-                <p>
+                </li>
+              </ul>
+            </fieldset>
+            <fieldset class="filter-form__fieldset">
+              <legend class="filter-form__legend">Особенности:</legend>
+              <ul class="filter-form__list" role="listbox">
+                <li class="filter-form__item" role="option">
                   <input type="checkbox" id="slider-features" name="slider" checked>
                   <label for="slider-features">Слайдер</label>
-                </p>
-                <p>
+                </li>
+                <li class="filter-form__item" role="option">
                   <input type="checkbox" id="benefits-block-features" name="benefits-block">
                   <label for="benefits-block-features">Блок преимуществ</label>
-                </p>
-                <p>
+                </li>
+                <li class="filter-form__item" role="option">
                   <input type="checkbox" id="news-features" name="news" checked>
                   <label for="news-features">Новости</label>
-                </p>
-                <p>
+                </li>
+                <li class="filter-form__item" role="option">
                   <input type="checkbox" id="gallery-features" name="gallery">
                   <label for="gallery-features">Галерея</label>
-                </p>
-                <p>
+                </li>
+                <li class="filter-form__item" role="option">
                   <input type="checkbox" id="basket-features" name="basket">
                   <label for="basket-features">Корзина</label>
-                </p>
-              </fieldset>
-              <button class="btn filter__btn" type="submit">Показать</button>
-            </form>
-          </aside>
+                </li>
+              </ul>
+            </fieldset>
+            <button class="btn filter-form__btn" type="submit">Показать</button>
+          </form>
           <div class="search__gallery gallery">
             <div class="gallery__header sort">
               <p class="sort__title" role="heading">Сортировать:</p>
               <div class="sort__wrapper">
                 <div class="sort__buttons" role="menu">
-                  <button type="button" class="btn sort__button sort__button--active" role="menuitemradio" aria-checked="true">По цене</button>
-                  <button type="button" class="btn sort__button" role="menuitemradio">По типу</button>
-                  <button type="button" class="btn sort__button" role="menuitemradio">По названию</button>
+                  <button type="button" class="btn sort__button sort__button--active" role="menuitemradio"
+                    aria-checked="true">По цене</button>
+                  <button type="button" class="btn sort__button" role="menuitemradio" aria-checked="false">По
+                    типу</button>
+                  <button type="button" class="btn sort__button" role="menuitemradio" aria-checked="false">По
+                    названию</button>
                 </div>
-                <div class="sort__controls">
-                  <a href="#" class="btn sort__control sort__control--active" aria-label="По возрастанию">
+                <div class="sort__controls" role="menu">
+                  <a href="#" class="btn sort__control sort__control--active" aria-label="По возрастанию"
+                    role="menuitemradio" aria-checked="true">
                     <svg role="img" aria-hidden="true" width="11" height="10">
                       <use xlink:href="#icon-down-dir" x="0" y="0"></use>
                     </svg>
                   </a>
-                  <a href="#" class="btn sort__control" aria-label="По убыванию">
+                  <a href="#" class="btn sort__control" aria-label="По убыванию" role="menuitemradio"
+                    aria-checked="false">
                     <svg role="img" aria-hidden="true" width="11" height="10">
                       <use xlink:href="#icon-up-dir" x="0" y="0"></use>
                     </svg>
@@ -359,8 +373,10 @@
       </p>
       <button type="submit" class="btn">Отправить</button>
     </form>
-    <button class="modal__close" type="button">
-      <span class="visually-hidden">Закрыть</span>
+    <button class="modal__close" type="button" aria-label="Закрыть">
+      <svg role="img"  aria-hidden="true" width="21" height="21">
+        <use xlink:href="#icon-cross" x="0" y="0"></use>
+      </svg>
     </button>
   </section>
   <!-- /.modal -->
