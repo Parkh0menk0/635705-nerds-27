@@ -111,11 +111,13 @@
                 <div class="double-range__price">
                   <p class="double-range__wrapper">
                     <label class="double-range__label" for="min-value" class="double-range__min-value">от</label>
-                    <input id="min-value" class="double-range__input" name="min-value" type="number" value="0" min="1" max="5">
+                    <input id="min-value" class="double-range__input" name="min-value" type="number" value="0" min="1"
+                      max="5">
                   </p>
                   <p class="double-range__wrapper">
                     <label class="double-range__label" for="max-value" class="double-range__max-value">до</label>
-                    <input id="max-value" class="double-range__input" name="max-value" type="number" value="15000" min="1" max="15000">
+                    <input id="max-value" class="double-range__input" name="max-value" type="number" value="15000"
+                      min="1" max="15000">
                   </p>
                 </div>
               </div>
@@ -124,11 +126,11 @@
               <legend class="filter-form__legend">Сетка:</legend>
               <ul class="filter-form__list" role="listbox">
                 <li class="filter-form__item" role="option">
-                  <input id="adaptive-grid" class="visually-hidden" type="radio"  name="grid" value="adaptive" checked>
+                  <input id="adaptive-grid" class="visually-hidden" type="radio" name="grid" value="adaptive" checked>
                   <label class="filter-form__label" tabindex="0" for="adaptive-grid">Адаптивная</label>
                 </li>
                 <li class="filter-form__item" role="option">
-                  <input id="fixed-grid" class="visually-hidden" type="radio"  name="grid" value="fixed">
+                  <input id="fixed-grid" class="visually-hidden" type="radio" name="grid" value="fixed">
                   <label class="filter-form__label" tabindex="0" for="fixed-grid">Фиксированная</label>
                 </li>
                 <li class="filter-form__item" role="option">
@@ -183,8 +185,7 @@
                       <use xlink:href="#icon-down-dir" x="0" y="0"></use>
                     </svg>
                   </a>
-                  <a href="#" class="sort__control" aria-label="По убыванию" role="menuitemradio"
-                    aria-checked="false">
+                  <a href="#" class="sort__control" aria-label="По убыванию" role="menuitemradio" aria-checked="false">
                     <svg role="img" aria-hidden="true" width="11" height="10">
                       <use xlink:href="#icon-up-dir" x="0" y="0"></use>
                     </svg>
@@ -363,24 +364,26 @@
   <section class="modal" aria-labelledby="write-us">
     <h2 id="write-us" class="modal__title">Напишите нам</h2>
     <form class="index-form modal__form" action="https://echo.htmlacademy.ru" method="post">
-      <p>
-        <label class="filter-form__label" tabindex="0" for="index-form-name" class="modal__name">Ваше имя:</label>
-        <input id="index-form-name" type="text" name="name" placeholder="Имя Фамилия" autocomplete="on"
-          aria-required="true">
+      <div class="modal__wrapper">
+        <p class="modal__layout modal__layout--half">
+          <label for="index-form-name" class="modal__label">Ваше имя:</label>
+          <input class="modal__input" id="index-form-name" type="text" name="name" placeholder="Имя Фамилия"
+            autocomplete="on" required>
+        </p>
+        <p class="modal__layout modal__layout--half">
+          <label id="label-mail" for="index-form-email" class="modal__label">Ваш e-mail:</label>
+          <input class="modal__input" id="index-form-email" aria-labelledby="label-mail" type="email" name="email"
+            placeholder="email@example.com" autocomplete="on" required>
+        </p>
+      </div>
+      <p class="modal__layout modal__layout--whole">
+        <label for="index-form-letter" class="modal__label">Текст письма:</label>
+        <textarea class="modal__input modal__input--textarea" id="index-form-letter" name="question"
+          placeholder="В свободной форме" autocomplete="on" required></textarea>
       </p>
-      <p>
-        <label id="label-mail" for="index-form-email" class="modal__email">Ваш e-mail:</label>
-        <input id="index-form-email" aria-labelledby="label-mail" type="email" name="email"
-          placeholder="email@example.com" autocomplete="on" aria-required="true">
-      </p>
-      <p>
-        <label class="filter-form__label" tabindex="0" for="index-form-letter" class="modal__question">Текст письма:</label>
-        <textarea id="index-form-letter" name="question" placeholder="В свободной форме" autocomplete="on"
-          aria-required="true"></textarea>
-      </p>
-      <button type="submit" class="btn-res btn">Отправить</button>
+      <button class="btn-res btn modal__btn" type="submit">Отправить</button>
     </form>
-    <button class="btn-res btn modal__close" type="button" aria-label="Закрыть">
+    <button class="btn-res modal__close" type="button" aria-label="Закрыть">
       <svg role="img" aria-hidden="true" width="21" height="21">
         <use xlink:href="#icon-cross" x="0" y="0"></use>
       </svg>
@@ -391,6 +394,8 @@
   <div class="modal-overlay"></div>
   <!-- /.modal-overlay -->
 
+  <script src="js/swiper.min.js"></script>
+  <script src="js/script.js"></script>
 </body>
 
 </html>

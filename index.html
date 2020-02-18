@@ -300,24 +300,26 @@
   <section class="modal" aria-labelledby="write-us">
     <h2 id="write-us" class="modal__title">Напишите нам</h2>
     <form class="index-form modal__form" action="https://echo.htmlacademy.ru" method="post">
-      <p>
-        <label for="index-form-name" class="modal__name">Ваше имя:</label>
-        <input id="index-form-name" type="text" name="name" placeholder="Имя Фамилия" autocomplete="on"
-          aria-required="true">
+      <div class="modal__wrapper">
+        <p class="modal__layout modal__layout--half">
+          <label for="index-form-name" class="modal__label">Ваше имя:</label>
+          <input class="modal__input" id="index-form-name" type="text" name="name" placeholder="Имя Фамилия" autocomplete="on"
+            required>
+        </p>
+        <p class="modal__layout modal__layout--half">
+          <label id="label-mail" for="index-form-email" class="modal__label">Ваш e-mail:</label>
+          <input class="modal__input" id="index-form-email" aria-labelledby="label-mail" type="email" name="email"
+            placeholder="email@example.com" autocomplete="on" required>
+        </p>
+      </div>
+      <p class="modal__layout modal__layout--whole">
+        <label for="index-form-letter" class="modal__label">Текст письма:</label>
+        <textarea class="modal__input modal__input--textarea" id="index-form-letter" name="question" placeholder="В свободной форме" autocomplete="on"
+          required></textarea>
       </p>
-      <p>
-        <label id="label-mail" for="index-form-email" class="modal__email">Ваш e-mail:</label>
-        <input id="index-form-email" aria-labelledby="label-mail" type="email" name="email"
-          placeholder="email@example.com" autocomplete="on" aria-required="true">
-      </p>
-      <p>
-        <label for="index-form-letter" class="modal__question">Текст письма:</label>
-        <textarea id="index-form-letter" name="question" placeholder="В свободной форме" autocomplete="on"
-          aria-required="true"></textarea>
-      </p>
-      <button class="btn-res btn" type="submit">Отправить</button>
+      <button class="btn-res btn modal__btn" type="submit">Отправить</button>
     </form>
-    <button class="btn-res btn modal__close" type="button" aria-label="Закрыть">
+    <button class="btn-res modal__close" type="button" aria-label="Закрыть">
       <svg role="img" aria-hidden="true" width="21" height="21">
         <use xlink:href="#icon-cross" x="0" y="0"></use>
       </svg>
