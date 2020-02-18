@@ -66,17 +66,19 @@ input[type="checkbox"].visually-hidden,
 input[type="radio"].visually-hidden {
   position: absolute;
 
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+
   width: 1px;
   height: 1px;
   margin: -1px;
-  border: 0;
   padding: 0;
 
   white-space: nowrap;
 
+  border: 0;
+
   clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
 }
 
 .btn-res {
@@ -364,17 +366,20 @@ input[type="radio"].visually-hidden {
 }
 
 .catalog-lead {
-  background-color: #eee;
   padding-top: 59px;
   padding-bottom: 108px;
+
+  background-color: #eee;
 }
 
 .catalog-lead__title {
-  margin: 0;
-  text-align: center;
   font-size: 55px;
   font-weight: 500;
   line-height: 55px;
+
+  margin: 0;
+
+  text-align: center;
 
   color: #000;
 }
@@ -637,9 +642,10 @@ input[type="radio"].visually-hidden {
 }
 
 .filter-form__fieldset {
-  border: none;
-  padding: 0;
   margin: 0;
+  padding: 0;
+
+  border: none;
 }
 
 .double-range {
@@ -679,15 +685,15 @@ input[type="radio"].visually-hidden {
 
 .double-range__controls {
   position: relative;
+
   height: 80px;
   margin-bottom: 14px;
   padding-top: 39px;
   padding-right: 20px;
   padding-left: 20px;
 
-  background-color: #f1f1f1;
-
   border-radius: 5px;
+  background-color: #f1f1f1;
 }
 
 .double-range__scale {
@@ -707,15 +713,17 @@ input[type="radio"].visually-hidden {
   position: absolute;
   top: 30px;
   left: 0;
+
   width: 20px;
   height: 20px;
   padding: 0;
 
-  border: 8px solid #ffffff;
+  cursor: pointer;
+
+  border: 8px solid #fff;
+  border-radius: 50%;
   background-color: #ababab;
   box-shadow: 0 2px 1px 0 #cfcfcf;
-  border-radius: 50%;
-  cursor: pointer;
 }
 
 .double-range__toggle--min {
@@ -729,38 +737,46 @@ input[type="radio"].visually-hidden {
 .double-range__price {
   display: flex;
   flex-direction: row;
+
   justify-content: space-between;
 }
 
 .double-range__wrapper {
-  margin: 0;
-  width: 44%;
   display: flex;
   flex-direction: row;
+
+  width: 44%;
+  margin: 0;
+
   justify-content: space-between;
   align-items: center;
 }
 
 .double-range__label {
   font-size: 16px;
+
   text-transform: uppercase;
 }
 
 .double-range__input {
   font-size: 16px;
-  text-align: center;
-  color: #283136;
+
   width: 80px;
   padding: 10px;
+
+  text-align: center;
+
+  color: #283136;
   border: none;
   border-radius: 5px;
   background: #f1f1f1;
 }
 
 .filter-form__list {
-  list-style: none;
   margin: 0;
   padding: 0;
+
+  list-style: none;
 }
 
 .filter-form__item {
@@ -774,7 +790,9 @@ input[type="radio"].visually-hidden {
 
 .filter-form__label {
   position: relative;
+
   display: block;
+
   cursor: pointer;
   user-select: none;
 }
@@ -791,14 +809,17 @@ input[type="checkbox"] + .filter-form__label {
 }
 
 input[type="checkbox"] + .filter-form__label::before {
-  content: "";
   position: absolute;
-  left: -35px;
   top: -2px;
+  left: -35px;
+
   width: 23px;
   height: 23px;
-  opacity: 0.4;
+
+  content: "";
   transition: opacity 0.5s ease;
+
+  opacity: 0.4;
   background-image: url("../img/checkbox-off.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
@@ -809,30 +830,34 @@ input[type="checkbox"]:checked + .filter-form__label::before {
 }
 
 input[type="checkbox"]:checked + .filter-form__label::after {
-  content: "";
-
   position: absolute;
-  left: -35px;
   top: -2px;
+  left: -35px;
+
   width: 26px;
   height: 23px;
-  opacity: 0.4;
+
+  content: "";
   transition: opacity 0.5s ease;
+
+  opacity: 0.4;
   background-image: url("../img/checkbox-on.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
 }
 
 input[type="radio"] + .filter-form__label::before {
-  content: "";
-
   position: absolute;
   top: -3px;
   left: -35px;
+
   width: 25px;
   height: 25px;
-  opacity: 0.4;
+
+  content: "";
   transition: opacity 0.5s ease;
+
+  opacity: 0.4;
   background-image: url("../img/radio-off.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
@@ -843,15 +868,17 @@ input[type="radio"]:checked + .filter-form__label::before {
 }
 
 input[type="radio"]:checked + .filter-form__label::after {
-  content: "";
-
   position: absolute;
   top: -3px;
   left: -35px;
+
   width: 25px;
   height: 25px;
-  opacity: 0.4;
+
+  content: "";
   transition: opacity 0.5s ease;
+
+  opacity: 0.4;
   background-image: url("../img/radio-on.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
@@ -873,10 +900,10 @@ input[type="checkbox"] + .filter-form__label:active {
 }
 
 .filter-form__btn {
+  line-height: 18px;
+
   width: 100%;
   padding: 1em 1em 0.9em;
-
-  line-height: 18px;
 
   transition: background-color 0.5s ease;
 
@@ -906,9 +933,11 @@ input[type="checkbox"] + .filter-form__label:active {
 }
 
 .sort__title {
-  flex-basis: 360px;
-  margin: 0;
   line-height: 24px;
+
+  margin: 0;
+
+  flex-basis: 360px;
 }
 
 .sort__wrapper {
@@ -922,9 +951,11 @@ input[type="checkbox"] + .filter-form__label:active {
 }
 
 .sort__buttons {
-  width: 275px;
   display: flex;
   flex-direction: row;
+
+  width: 275px;
+
   justify-content: flex-start;
   align-items: center;
   flex-wrap: wrap;
@@ -945,11 +976,13 @@ input[type="checkbox"] + .filter-form__label:active {
   font-weight: 400;
   line-height: 18px;
 
+  margin-right: 25px;
+
   transition: opacity 0.5s ease;
   text-transform: uppercase;
+
   opacity: 0.3;
   color: #000;
-  margin-right: 25px;
 }
 
 .sort__button:nth-child(3n) {
@@ -997,6 +1030,7 @@ input[type="checkbox"] + .filter-form__label:active {
 
 .product {
   position: relative;
+
   display: flex;
   flex-direction: column;
 
@@ -1026,24 +1060,30 @@ input[type="checkbox"] + .filter-form__label:active {
 }
 
 .product__content {
-  transition: opacity 0.5s ease;
-  opacity: 0;
   position: absolute;
-  background-color: #eee;
   bottom: 0;
+
   width: 100%;
-  order: 2;
   padding: 27px 66px 43px;
+
+  transition: opacity 0.5s ease;
+
+  opacity: 0;
+  background-color: #eee;
+
+  order: 2;
 }
 
 .product__title {
-  text-align: center;
-  margin: 0;
   font-size: 18px;
   font-weight: 700;
   line-height: 30px;
+
+  margin: 0;
   margin-bottom: 15px;
+
   transition: color 0.5s ease;
+  text-align: center;
   text-transform: uppercase;
 
   color: #000;
@@ -1059,19 +1099,21 @@ input[type="checkbox"] + .filter-form__label:active {
 }
 
 .product__description {
-  margin: 0;
-  margin-bottom: 30px;
-  text-align: center;
   font-size: 16px;
   font-weight: 400;
   line-height: 18px;
+
+  margin: 0;
+  margin-bottom: 30px;
+
+  text-align: center;
 
   color: #666;
 }
 
 .product__link {
-  margin: 0 auto;
   width: 200px;
+  margin: 0 auto;
   padding: 0.8em 1em 0.7em;
 }
 
@@ -1152,10 +1194,11 @@ input[type="checkbox"] + .filter-form__label:active {
   display: flex;
   flex-direction: row;
 
-  justify-content: space-between;
-  align-items: flex-start;
   padding-top: 55px;
   padding-bottom: 60px;
+
+  justify-content: space-between;
+  align-items: flex-start;
 }
 
 .filter-form {
@@ -1171,6 +1214,7 @@ input[type="checkbox"] + .filter-form__label:active {
   flex-direction: row;
 
   margin: 0;
+  margin-bottom: 27px;
   padding: 0;
 
   list-style: none;
@@ -1178,7 +1222,6 @@ input[type="checkbox"] + .filter-form__label:active {
   justify-content: flex-start;
   align-items: flex-start;
   flex-wrap: wrap;
-  margin-bottom: 27px;
 }
 
 .pagination {
@@ -1207,9 +1250,10 @@ input[type="checkbox"] + .filter-form__label:active {
 
 .pagination__item {
   width: 50px;
-  border-radius: 0.1em;
+
   transition: background-color 0.5s ease;
 
+  border-radius: 0.1em;
   background-color: #eee;
 }
 
@@ -1223,16 +1267,18 @@ input[type="checkbox"] + .filter-form__label:active {
 }
 
 .pagination__item--active {
-  box-shadow: inset 0 0 0 3px #dbdbdb;
   background-color: #fff;
+  box-shadow: inset 0 0 0 3px #dbdbdb;
 }
 
 .pagination__link {
-  display: block;
-  padding: 16px 20px;
   font-size: 16px;
   font-weight: 500;
   line-height: 18px;
+
+  display: block;
+
+  padding: 16px 20px;
 
   color: #000;
 }
@@ -1243,13 +1289,13 @@ input[type="checkbox"] + .filter-form__label:active {
   line-height: 18px;
 
   width: 260px;
+  padding: 1em 1em 0.9em;
 
+  user-select: none;
   transition: background-color 0.5s ease;
 
   color: #000;
   background-color: #eee;
-  padding: 1em 1em 0.9em;
-  user-select: none;
 }
 
 .pagination__btn:hover:not(.pagination__btn--active) {
@@ -1268,19 +1314,23 @@ input[type="checkbox"] + .filter-form__label:active {
 }
 
 .contacts__map {
-  height: 416px;
   position: relative;
+
+  height: 416px;
 
   text-align: center;
 }
 
 .contacts__map::before {
-  content: "";
   position: absolute;
+  top: 89px;
+  left: 820px;
+
   width: 231px;
   height: 190px;
-  left: 820px;
-  top: 89px;
+
+  content: "";
+
   background-image: url("../img/files/map-marker.png");
   background-repeat: no-repeat;
   background-position: 0 0;
@@ -1421,36 +1471,43 @@ input[type="checkbox"] + .filter-form__label:active {
 }
 
 .modal {
-  display: none;
   position: fixed;
   z-index: 10;
-  color: #000000;
-
-  background-color: #fff;
   bottom: 180px;
   left: 50%;
+
+  display: none;
+
   width: 960px;
-  transform: translateX(-50%);
   padding: 73px 100px 84px;
+
+  transform: translateX(-50%);
+
+  color: #000;
+  background-color: #fff;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.7);
 }
 
 .modal__title {
-  margin: 0;
-  margin-bottom: 41px;
-  color: #000000;
   font-size: 45px;
   font-weight: 500;
   line-height: 45px;
+
+  margin: 0;
+  margin-bottom: 41px;
+
+  color: #000;
 }
 
 .modal__wrapper {
   display: flex;
   flex-direction: row;
+
+  margin-bottom: 34px;
+
   justify-content: start;
   align-items: center;
   flex-wrap: wrap;
-  margin-bottom: 34px;
 }
 
 .modal__layout {
@@ -1467,21 +1524,26 @@ input[type="checkbox"] + .filter-form__label:active {
 }
 
 .modal__label {
-  display: block;
-  height: 13px;
-  color: #000000;
   font-size: 16px;
   font-weight: 700;
   line-height: 18px;
+
+  display: block;
+
+  height: 13px;
   margin-bottom: 14px;
+
+  color: #000;
 }
 
 .modal__input {
+  width: 100%;
+  padding: 14px 12px;
+
+  transition: border-color 0.5s ease;
+
   border: 2px solid #d7dcde;
   border-radius: 0.1em;
-  padding: 14px 12px;
-  width: 100%;
-  transition: border-color 0.5s ease;
 }
 
 .modal__input:hover {
@@ -1512,16 +1574,19 @@ input[type="checkbox"] + .filter-form__label:active {
 
 .modal__close {
   position: absolute;
+  top: 84px;
+  right: 90px;
+
   width: 21px;
   height: 21px;
-  right: 90px;
-  top: 84px;
 }
 
 .modal__close svg {
   transition: opacity 0.5s ease;
-  fill: #fb565a;
+
   opacity: 0.3;
+
+  fill: #fb565a;
 }
 
 .modal__close:hover svg {
