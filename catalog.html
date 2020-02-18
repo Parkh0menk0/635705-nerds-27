@@ -98,66 +98,67 @@
       <div class="container">
         <div class="search__wrapper">
           <form class="filter-form" method="get" action="https://echo.htmlacademy.ru" role="search">
-            <fieldset class="filter-form__fieldset">
-              <legend class="filter-form__legend">Стоимость:</legend>
-              <div class="filter-form__range range">
-                <div class="range__controls">
-                  <div class="range__scale">
-                    <div class="range__bar"></div>
+            <fieldset class="filter-form__fieldset double-range">
+              <legend class="filter-form__legend double-range__legend">Стоимость:</legend>
+              <div class="double-range__range">
+                <div class="double-range__controls">
+                  <div class="double-range__scale">
+                    <div class="double-range__bar"></div>
                   </div>
-                  <div class="range__toggle range__toggle--min"></div>
-                  <div class="range__toggle range__toggle--max"></div>
+                  <div class="double-range__toggle double-range__toggle--min"></div>
+                  <div class="double-range__toggle double-range__toggle--max"></div>
                 </div>
-                <div class="range__price">
-                  <p>
-                    <label class="min-price">от</label>
-                    <input name="min-price" type="text" value="0">
+                <div class="double-range__price">
+                  <p class="double-range__wrapper">
+                    <label class="double-range__label" for="min-value" class="double-range__min-value">от</label>
+                    <input id="min-value" class="double-range__input" name="min-value" type="number" value="0" min="1" max="5">
                   </p>
-                  <p><label class="max-price">до</label>
-                    <input name="max-price" type="text" value="15000">
+                  <p class="double-range__wrapper">
+                    <label class="double-range__label" for="max-value" class="double-range__max-value">до</label>
+                    <input id="max-value" class="double-range__input" name="max-value" type="number" value="15000" min="1" max="15000">
                   </p>
                 </div>
               </div>
             </fieldset>
-            <fieldset class="filter-form__fieldset">
+            <fieldset class="filter-form__fieldset grid">
               <legend class="filter-form__legend">Сетка:</legend>
               <ul class="filter-form__list" role="listbox">
                 <li class="filter-form__item" role="option">
-                  <input type="radio" id="adaptive-grid" name="grid" value="adaptive" checked>
-                  <label for="adaptive-grid">Адаптивная</label>
+                  <input id="adaptive-grid" class="visually-hidden" type="radio"  name="grid" value="adaptive" checked>
+                  <label class="filter-form__label" tabindex="0" for="adaptive-grid">Адаптивная</label>
                 </li>
                 <li class="filter-form__item" role="option">
-                  <input type="radio" id="fixed-grid" name="grid" value="fixed">
-                  <label for="fixed-grid">Фиксированная</label>
+                  <input id="fixed-grid" class="visually-hidden" type="radio"  name="grid" value="fixed">
+                  <label class="filter-form__label" tabindex="0" for="fixed-grid">Фиксированная</label>
                 </li>
                 <li class="filter-form__item" role="option">
-                  <input type="radio" id="rubber-grid" name="grid" value="rubber">
-                  <label for="rubber-grid">Резиновая</label>
+                  <input id="rubber-grid" class="visually-hidden" type="radio" name="grid" value="rubber">
+                  <label class="filter-form__label" tabindex="0" for="rubber-grid">Резиновая</label>
                 </li>
               </ul>
             </fieldset>
-            <fieldset class="filter-form__fieldset">
+            <fieldset class="filter-form__fieldset features">
               <legend class="filter-form__legend">Особенности:</legend>
               <ul class="filter-form__list" role="listbox">
                 <li class="filter-form__item" role="option">
-                  <input type="checkbox" id="slider-features" name="slider" checked>
-                  <label for="slider-features">Слайдер</label>
+                  <input id="slider-features" class="visually-hidden" type="checkbox" name="slider" checked>
+                  <label class="filter-form__label" tabindex="0" for="slider-features">Слайдер</label>
                 </li>
                 <li class="filter-form__item" role="option">
-                  <input type="checkbox" id="benefits-block-features" name="benefits-block">
-                  <label for="benefits-block-features">Блок преимуществ</label>
+                  <input id="benefits-block-features" class="visually-hidden" type="checkbox" name="benefits-block">
+                  <label class="filter-form__label" tabindex="0" for="benefits-block-features">Блок преимуществ</label>
                 </li>
                 <li class="filter-form__item" role="option">
-                  <input type="checkbox" id="news-features" name="news" checked>
-                  <label for="news-features">Новости</label>
+                  <input id="news-features" class="visually-hidden" type="checkbox" name="news" checked>
+                  <label class="filter-form__label" tabindex="0" for="news-features">Новости</label>
                 </li>
                 <li class="filter-form__item" role="option">
-                  <input type="checkbox" id="gallery-features" name="gallery">
-                  <label for="gallery-features">Галерея</label>
+                  <input id="gallery-features" class="visually-hidden" type="checkbox" name="gallery">
+                  <label class="filter-form__label" tabindex="0" for="gallery-features">Галерея</label>
                 </li>
                 <li class="filter-form__item" role="option">
-                  <input type="checkbox" id="basket-features" name="basket">
-                  <label for="basket-features">Корзина</label>
+                  <input id="basket-features" class="visually-hidden" type="checkbox" name="basket">
+                  <label class="filter-form__label" tabindex="0" for="basket-features">Корзина</label>
                 </li>
               </ul>
             </fieldset>
@@ -168,21 +169,21 @@
               <p class="sort__title" role="heading">Сортировать:</p>
               <div class="sort__wrapper">
                 <div class="sort__buttons" role="menu">
-                  <button type="button" class="btn-res btn sort__button sort__button--active" role="menuitemradio"
+                  <button type="button" class="btn-res sort__button sort__button--active" role="menuitemradio"
                     aria-checked="true">По цене</button>
-                  <button type="button" class="btn-res btn sort__button" role="menuitemradio" aria-checked="false">По
+                  <button type="button" class="btn-res sort__button" role="menuitemradio" aria-checked="false">По
                     типу</button>
-                  <button type="button" class="btn-res btn sort__button" role="menuitemradio" aria-checked="false">По
+                  <button type="button" class="btn-res sort__button" role="menuitemradio" aria-checked="false">По
                     названию</button>
                 </div>
                 <div class="sort__controls" role="menu">
-                  <a href="#" class="btn sort__control sort__control--active" aria-label="По возрастанию"
+                  <a href="#" class="sort__control sort__control--active" aria-label="По возрастанию"
                     role="menuitemradio" aria-checked="true">
                     <svg role="img" aria-hidden="true" width="11" height="10">
                       <use xlink:href="#icon-down-dir" x="0" y="0"></use>
                     </svg>
                   </a>
-                  <a href="#" class="btn sort__control" aria-label="По убыванию" role="menuitemradio"
+                  <a href="#" class="sort__control" aria-label="По убыванию" role="menuitemradio"
                     aria-checked="false">
                     <svg role="img" aria-hidden="true" width="11" height="10">
                       <use xlink:href="#icon-up-dir" x="0" y="0"></use>
@@ -268,16 +269,16 @@
             <div class="pagination">
               <ul class="pagination__list">
                 <li class="pagination__item pagination__item--active" aria-current="page">
-                  <a class="btn pagination__link">
+                  <a class="pagination__link">
                     <span class="visually-hidden">Текущий пункт:</span>
                     1
                   </a>
                 </li>
                 <li class="pagination__item">
-                  <a class="btn pagination__link" href="#2">2</a>
+                  <a class="pagination__link" href="#2">2</a>
                 </li>
                 <li class="pagination__item">
-                  <a class="btn pagination__link" href="#3">3</a>
+                  <a class="pagination__link" href="#3">3</a>
                 </li>
               </ul>
               <button class="pagination__btn btn-res btn" type="button">Следующая</button>
@@ -363,7 +364,7 @@
     <h2 id="write-us" class="modal__title">Напишите нам</h2>
     <form class="index-form modal__form" action="https://echo.htmlacademy.ru" method="post">
       <p>
-        <label for="index-form-name" class="modal__name">Ваше имя:</label>
+        <label class="filter-form__label" tabindex="0" for="index-form-name" class="modal__name">Ваше имя:</label>
         <input id="index-form-name" type="text" name="name" placeholder="Имя Фамилия" autocomplete="on"
           aria-required="true">
       </p>
@@ -373,7 +374,7 @@
           placeholder="email@example.com" autocomplete="on" aria-required="true">
       </p>
       <p>
-        <label for="index-form-letter" class="modal__question">Текст письма:</label>
+        <label class="filter-form__label" tabindex="0" for="index-form-letter" class="modal__question">Текст письма:</label>
         <textarea id="index-form-letter" name="question" placeholder="В свободной форме" autocomplete="on"
           aria-required="true"></textarea>
       </p>
