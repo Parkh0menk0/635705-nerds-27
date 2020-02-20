@@ -14,7 +14,7 @@
   <link rel="preload" href="./fonts/robotobold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   <link rel="preload" href="./fonts/robotomedium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   <link rel="stylesheet" href="css/normalize.min.css">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.min.css">
 </head>
 
 <body>
@@ -59,22 +59,22 @@
         </a>
         <ul class="nav__list" role="menu">
           <li class="nav__item" role="menuitem">
-            <a class="header__link nav__link" href="#">Студия</a>
+            <a class="nav__link" href="#">Студия</a>
           </li>
           <li class="nav__item" role="menuitem">
-            <a class="header__link nav__link" href="#">Клиенты</a>
+            <a class="nav__link" href="#">Клиенты</a>
           </li>
           <li class="nav__item nav__item--active" role="menuitem" aria-current="page">
-            <a class="header__link nav__link">
+            <a class="nav__link">
               <span class="visually-hidden">Текущий пункт:</span>
               Магазин
             </a>
           </li>
           <li class="nav__item" role="menuitem">
-            <a class="header__link nav__link" href="#contacts">Контакты</a>
+            <a class="nav__link" href="#contacts">Контакты</a>
           </li>
         </ul>
-        <a href="#" class="header__link header__link--basket">
+        <a href="#" class="header__basket">
           <svg role="img" aria-hidden="true" width="15" height="15">
             <use xlink:href="#icon-cart" x="0" y="0"></use>
           </svg>
@@ -126,15 +126,15 @@
               <legend class="filter-form__legend">Сетка:</legend>
               <ul class="filter-form__list" role="listbox">
                 <li class="filter-form__item" role="option">
-                  <input id="adaptive-grid" class="visually-hidden" type="radio" name="grid" value="adaptive" checked>
+                  <input id="adaptive-grid" class="visually-hidden" type="radio" name="grid" value="adaptive" aria-label="Адаптивная" checked>
                   <label class="filter-form__label" tabindex="0" for="adaptive-grid">Адаптивная</label>
                 </li>
                 <li class="filter-form__item" role="option">
-                  <input id="fixed-grid" class="visually-hidden" type="radio" name="grid" value="fixed">
+                  <input id="fixed-grid" class="visually-hidden" type="radio" name="grid" value="fixed" aria-label="Фиксированная">
                   <label class="filter-form__label" tabindex="0" for="fixed-grid">Фиксированная</label>
                 </li>
                 <li class="filter-form__item" role="option">
-                  <input id="rubber-grid" class="visually-hidden" type="radio" name="grid" value="rubber">
+                  <input id="rubber-grid" class="visually-hidden" type="radio" name="grid" value="rubber" aria-label="Резиновая">
                   <label class="filter-form__label" tabindex="0" for="rubber-grid">Резиновая</label>
                 </li>
               </ul>
@@ -143,23 +143,23 @@
               <legend class="filter-form__legend">Особенности:</legend>
               <ul class="filter-form__list" role="listbox">
                 <li class="filter-form__item" role="option">
-                  <input id="slider-features" class="visually-hidden" type="checkbox" name="slider" checked>
+                  <input id="slider-features" class="visually-hidden" type="checkbox" name="slider" aria-label="Слайдер" checked>
                   <label class="filter-form__label" tabindex="0" for="slider-features">Слайдер</label>
                 </li>
                 <li class="filter-form__item" role="option">
-                  <input id="benefits-block-features" class="visually-hidden" type="checkbox" name="benefits-block">
+                  <input id="benefits-block-features" class="visually-hidden" type="checkbox" name="benefits-block" aria-label="Блок преимуществ">
                   <label class="filter-form__label" tabindex="0" for="benefits-block-features">Блок преимуществ</label>
                 </li>
                 <li class="filter-form__item" role="option">
-                  <input id="news-features" class="visually-hidden" type="checkbox" name="news" checked>
+                  <input id="news-features" class="visually-hidden" type="checkbox" name="news" aria-label="Новости" checked>
                   <label class="filter-form__label" tabindex="0" for="news-features">Новости</label>
                 </li>
                 <li class="filter-form__item" role="option">
-                  <input id="gallery-features" class="visually-hidden" type="checkbox" name="gallery">
+                  <input id="gallery-features" class="visually-hidden" type="checkbox" name="gallery" aria-label="Галерея">
                   <label class="filter-form__label" tabindex="0" for="gallery-features">Галерея</label>
                 </li>
                 <li class="filter-form__item" role="option">
-                  <input id="basket-features" class="visually-hidden" type="checkbox" name="basket">
+                  <input id="basket-features" class="visually-hidden" type="checkbox" name="basket" aria-label="Корзина">
                   <label class="filter-form__label" tabindex="0" for="basket-features">Корзина</label>
                 </li>
               </ul>
