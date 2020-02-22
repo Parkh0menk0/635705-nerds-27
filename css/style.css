@@ -2247,7 +2247,7 @@ input[type="radio"]:checked:focus + .filter-form__label::after {
   position: relative;
 }
 
-.contacts__wrapper::before {
+.contacts__marker {
   position: absolute;
   z-index: 3;
   top: 89px;
@@ -2255,12 +2255,6 @@ input[type="radio"]:checked:focus + .filter-form__label::after {
 
   width: 231px;
   height: 190px;
-
-  content: "";
-
-  background-image: url("../img/files/map-marker.png");
-  background-repeat: no-repeat;
-  background-position: 0 0;
 }
 
 .contacts__map {
