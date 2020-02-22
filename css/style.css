@@ -650,7 +650,7 @@ body {
   font-weight: 400;
   line-height: 1.5;
 
-  min-width: 320px;
+  min-width: 1200px;
   height: 100%;
   margin: 0;
   padding: 0;
@@ -1872,14 +1872,9 @@ input[type="radio"]:checked:focus + .filter-form__label::after {
   bottom: 0;
 
   display: -webkit-box;
-
   display: -ms-flexbox;
-
   display: flex;
   overflow: hidden;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
   flex-direction: column;
 
   width: 100%;
@@ -1892,10 +1887,11 @@ input[type="radio"]:checked:focus + .filter-form__label::after {
   opacity: 0;
   background-color: #eee;
 
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   -webkit-box-pack: end;
-
   -ms-flex-pack: end;
-
   justify-content: flex-end;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -2237,11 +2233,25 @@ input[type="radio"]:checked:focus + .filter-form__label::after {
   background-color: #e9e5dc;
 }
 
-.contacts::before {
+.contacts iframe {
+  position: absolute;
+  z-index: 2;
+
+  width: 100%;
+  height: 416px;
+
+  border: none;
+}
+
+.contacts__wrapper {
+  position: relative;
+}
+
+.contacts__wrapper::before {
   position: absolute;
   z-index: 3;
   top: 89px;
-  left: 820px;
+  left: 680px;
 
   width: 231px;
   height: 190px;
@@ -2253,13 +2263,6 @@ input[type="radio"]:checked:focus + .filter-form__label::after {
   background-position: 0 0;
 }
 
-.contacts iframe {
-  position: relative;
-  z-index: 2;
-
-  border: none;
-}
-
 .contacts__map {
   position: absolute;
   top: 0;
@@ -2269,7 +2272,6 @@ input[type="radio"]:checked:focus + .filter-form__label::after {
   position: absolute;
   z-index: 2;
   top: 54px;
-  left: 140px;
 
   width: 320px;
   padding: 49px 50px;
@@ -2679,7 +2681,6 @@ input[type="radio"]:checked:focus + .filter-form__label::after {
   display: block;
 
   -webkit-animation: bounce 0.6s;
-
   animation: bounce 0.6s;
 }
 

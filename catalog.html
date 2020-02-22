@@ -3,6 +3,8 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=1200">
+  <meta name="theme-color" content="#d7373b">
   <meta name="keywords" content="вёрстка, HTML, CSS, Нёрдс">
   <meta name="description" content="Дизайн студия из Краснодара - Нёрдс">
   <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/icon-32.png">
@@ -14,7 +16,7 @@
   <link rel="preload" href="./fonts/robotobold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   <link rel="preload" href="./fonts/robotomedium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   <link rel="stylesheet" href="css/normalize.min.css">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.min.css">
 </head>
 
 <body>
@@ -176,7 +178,7 @@
           </form>
           <div class="search__gallery gallery">
             <div class="gallery__header sort">
-              <p class="sort__title" role="heading">Сортировать:</p>
+              <p class="sort__title">Сортировать:</p>
               <div class="sort__wrapper">
                 <div class="sort__buttons" role="menu">
                   <button type="button" class="btn-res sort__button sort__button--active" role="menuitemradio"
@@ -318,27 +320,36 @@
   <footer class="footer">
     <section class="contacts" aria-labelledby="contacts">
       <h2 id="contacts" class="visually-hidden">Наши контакты и координаты</h2>
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036253056493!2d30.320853351344557!3d59.93871916896559!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCDQoNC-0YHRgdC40Y8sIDE5MTE4Ng!5e0!3m2!1sru!2sua!4v1582365156557!5m2!1sru!2sua"
+        width="100%" height="416" frameborder="0" style="border:0;" allowfullscreen=""
+        title="Санкт-Петербург, ул. Б. Конюшенная, д. 19/8"></iframe>
       <div class="contacts__map">
         <picture>
           <source type="image/webp" srcset="img/files/map-desktop@1x.webp 1x">
-          <img src="img/files/map-desktop@1x.png" aria-hidden="true" alt="" width="1440" height="416">
+          <img src="img/files/map-desktop@1x.png" aria-hidden="true" alt="Санкт-Петербург, ул. Б. Конюшенная, д. 19/8"
+            width="1440" height="416">
         </picture>
       </div>
-      <div itemscope itemtype="http://schema.org/Organization" class="contacts__content">
-        <h3 itemprop="name" class="contacts__title">Nёrds Design Studio</h3>
-        <div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress"
-          class="contacts__field contacts__field--address">
-          <div>
-            <span itemprop="postalCode">191186</span><span>, </span>
-            <span itemprop="addressLocality">Санкт-Петербург</span><span>, </span>
+      <div class="container">
+        <div class="contacts__wrapper">
+          <div itemscope itemtype="http://schema.org/Organization" class="contacts__content">
+            <h3 itemprop="name" class="contacts__title">Nёrds Design Studio</h3>
+            <div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress"
+              class="contacts__field contacts__field--address">
+              <div>
+                <span itemprop="postalCode">191186</span><span>, </span>
+                <span itemprop="addressLocality">Санкт-Петербург</span><span>, </span>
+              </div>
+              <span itemprop="streetAddress">ул. Б. Конюшенная, д. 19/8</span>
+            </div>
+            <div class="contacts__field contacts__field--tel">
+              <span>тел.</span>
+              <span itemprop="telephone">+7 (812) 275-75-75</span>
+            </div>
+            <a class="contacts__btn btn" href="mailto:name@email.com">Напишите нам</a>
           </div>
-          <span itemprop="streetAddress">ул. Б. Конюшенная, д. 19/8</span>
         </div>
-        <div class="contacts__field contacts__field--tel">
-          <span>тел.</span>
-          <span itemprop="telephone">+7 (812) 275-75-75</span>
-        </div>
-        <a class="contacts__btn btn" href="mailto:name@email.com">Напишите нам</a>
       </div>
     </section>
     <!-- /.contacts -->
@@ -397,7 +408,7 @@
       <p class="modal__layout modal__layout--whole">
         <label for="index-form-letter" class="modal__label">Текст письма:</label>
         <textarea class="modal__input modal__input--textarea" id="index-form-letter" name="question"
-          placeholder="В свободной форме" autocomplete="on"></textarea>
+          placeholder="В свободной форме" autocomplete="on" required></textarea>
       </p>
       <button class="btn-res btn modal__btn" type="submit">Отправить</button>
     </form>
