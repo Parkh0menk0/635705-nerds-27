@@ -14,7 +14,7 @@
   <link rel="preload" href="./fonts/robotobold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   <link rel="preload" href="./fonts/robotomedium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   <link rel="stylesheet" href="css/normalize.min.css">
-  <link rel="stylesheet" href="css/style.min.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
@@ -74,7 +74,7 @@
             <a class="nav__link" href="#contacts">Контакты</a>
           </li>
         </ul>
-        <a href="#" class="header__basket">
+        <a class="header__basket" href="#">
           <svg role="img" aria-hidden="true" width="15" height="15">
             <use xlink:href="#icon-cart" x="0" y="0"></use>
           </svg>
@@ -111,8 +111,8 @@
                 <div class="double-range__price">
                   <p class="double-range__wrapper">
                     <label class="double-range__label" for="min-value">от</label>
-                    <input id="min-value" class="double-range__input" name="min-value" type="number" value="0" min="1"
-                      max="5">
+                    <input id="min-value" class="double-range__input" name="min-value" type="number" value="0" min="0"
+                      max="15000">
                   </p>
                   <p class="double-range__wrapper">
                     <label class="double-range__label" for="max-value">до</label>
@@ -126,16 +126,19 @@
               <legend class="filter-form__legend">Сетка:</legend>
               <ul class="filter-form__list" role="listbox">
                 <li class="filter-form__item" role="option">
-                  <input id="adaptive-grid" class="visually-hidden" type="radio" name="grid" value="adaptive" aria-label="Адаптивная" checked>
-                  <label class="filter-form__label" tabindex="0" for="adaptive-grid">Адаптивная</label>
+                  <input id="adaptive-grid" class="visually-hidden" type="radio" name="grid" value="adaptive"
+                    aria-label="Адаптивная" checked>
+                  <label class="filter-form__label" for="adaptive-grid">Адаптивная</label>
                 </li>
                 <li class="filter-form__item" role="option">
-                  <input id="fixed-grid" class="visually-hidden" type="radio" name="grid" value="fixed" aria-label="Фиксированная">
-                  <label class="filter-form__label" tabindex="0" for="fixed-grid">Фиксированная</label>
+                  <input id="fixed-grid" class="visually-hidden" type="radio" name="grid" value="fixed"
+                    aria-label="Фиксированная">
+                  <label class="filter-form__label" for="fixed-grid">Фиксированная</label>
                 </li>
                 <li class="filter-form__item" role="option">
-                  <input id="rubber-grid" class="visually-hidden" type="radio" name="grid" value="rubber" aria-label="Резиновая">
-                  <label class="filter-form__label" tabindex="0" for="rubber-grid">Резиновая</label>
+                  <input id="rubber-grid" class="visually-hidden" type="radio" name="grid" value="rubber"
+                    aria-label="Резиновая">
+                  <label class="filter-form__label" for="rubber-grid">Резиновая</label>
                 </li>
               </ul>
             </fieldset>
@@ -143,24 +146,29 @@
               <legend class="filter-form__legend">Особенности:</legend>
               <ul class="filter-form__list" role="listbox">
                 <li class="filter-form__item" role="option">
-                  <input id="slider-features" class="visually-hidden" type="checkbox" name="slider" aria-label="Слайдер" checked>
-                  <label class="filter-form__label" tabindex="0" for="slider-features">Слайдер</label>
+                  <input id="slider-features" class="visually-hidden" type="checkbox" name="slider" aria-label="Слайдер"
+                    checked>
+                  <label class="filter-form__label" for="slider-features">Слайдер</label>
                 </li>
                 <li class="filter-form__item" role="option">
-                  <input id="benefits-block-features" class="visually-hidden" type="checkbox" name="benefits-block" aria-label="Блок преимуществ">
-                  <label class="filter-form__label" tabindex="0" for="benefits-block-features">Блок преимуществ</label>
+                  <input id="benefits-block-features" class="visually-hidden" type="checkbox" name="benefits-block"
+                    aria-label="Блок преимуществ">
+                  <label class="filter-form__label" for="benefits-block-features">Блок преимуществ</label>
                 </li>
                 <li class="filter-form__item" role="option">
-                  <input id="news-features" class="visually-hidden" type="checkbox" name="news" aria-label="Новости" checked>
-                  <label class="filter-form__label" tabindex="0" for="news-features">Новости</label>
+                  <input id="news-features" class="visually-hidden" type="checkbox" name="news" aria-label="Новости"
+                    checked>
+                  <label class="filter-form__label" for="news-features">Новости</label>
                 </li>
                 <li class="filter-form__item" role="option">
-                  <input id="gallery-features" class="visually-hidden" type="checkbox" name="gallery" aria-label="Галерея">
-                  <label class="filter-form__label" tabindex="0" for="gallery-features">Галерея</label>
+                  <input id="gallery-features" class="visually-hidden" type="checkbox" name="gallery"
+                    aria-label="Галерея">
+                  <label class="filter-form__label" for="gallery-features">Галерея</label>
                 </li>
                 <li class="filter-form__item" role="option">
-                  <input id="basket-features" class="visually-hidden" type="checkbox" name="basket" aria-label="Корзина">
-                  <label class="filter-form__label" tabindex="0" for="basket-features">Корзина</label>
+                  <input id="basket-features" class="visually-hidden" type="checkbox" name="basket"
+                    aria-label="Корзина">
+                  <label class="filter-form__label" for="basket-features">Корзина</label>
                 </li>
               </ul>
             </fieldset>
@@ -179,13 +187,13 @@
                     названию</button>
                 </div>
                 <div class="sort__controls" role="menu">
-                  <a href="#" class="sort__control sort__control--active" aria-label="По возрастанию"
+                  <a class="sort__control sort__control--active" href="#" aria-label="По возрастанию"
                     role="menuitemradio" aria-checked="true">
                     <svg role="img" aria-hidden="true" width="11" height="10">
                       <use xlink:href="#icon-down-dir" x="0" y="0"></use>
                     </svg>
                   </a>
-                  <a href="#" class="sort__control" aria-label="По убыванию" role="menuitemradio" aria-checked="false">
+                  <a class="sort__control" href="#" aria-label="По убыванию" role="menuitemradio" aria-checked="false">
                     <svg role="img" aria-hidden="true" width="11" height="10">
                       <use xlink:href="#icon-up-dir" x="0" y="0"></use>
                     </svg>
@@ -196,9 +204,11 @@
             <ul class="gallery__list">
               <li class="gallery__item product">
                 <div class="product__content">
-                  <h3 class="product__title">Sedona</h3>
-                  <p class="product__description">Информационный сайт для туристов</p>
-                  <a href="#" class="btn product__link">9 900 руб.</a>
+                  <a class="product__link product__link--title" href="#">
+                    <h3 class="product__title">Sedona</h3>
+                  </a>
+                  <p class="product__description product__description--sedona">Информационный сайт для туристов</p>
+                  <a class="btn product__link product__link--cost" href="#">9 900 руб.</a>
                 </div>
                 <picture>
                   <source type="image/webp" srcset="img/files/gallery-sedona-desktop@1x.webp 1x">
@@ -208,9 +218,12 @@
               </li>
               <li class="gallery__item product">
                 <div class="product__content">
-                  <h3 class="product__title">Pink App</h3>
-                  <p class="product__description">Продуктовый лендинг приложения для iOS и Android</p>
-                  <a href="#" class="btn product__link">9 900 руб.</a>
+                  <a class="product__link product__link--title" href="#">
+                    <h3 class="product__title">Pink App</h3>
+                  </a>
+                  <p class="product__description product__description--pink">Продуктовый лендинг приложения для iOS и
+                    Android</p>
+                  <a class="btn product__link product__link--cost" href="#">9 900 руб.</a>
                 </div>
                 <picture>
                   <source type="image/webp" srcset="img/files/gallery-pink-desktop@1x.webp 1x">
@@ -220,9 +233,12 @@
               </li>
               <li class="gallery__item product">
                 <div class="product__content">
-                  <h3 class="product__title">Barbershop</h3>
-                  <p class="product__description">Сайт салона красоты. Для мужчин, да.</p>
-                  <a href="#" class="btn product__link">9 900 руб.</a>
+                  <a class="product__link product__link--title" href="#">
+                    <h3 class="product__title">Barbershop</h3>
+                  </a>
+                  <p class="product__description product__description--barbershop">Сайт салона красоты. Для мужчин, да.
+                  </p>
+                  <a class="btn product__link product__link--cost" href="#">9 900 руб.</a>
                 </div>
                 <picture>
                   <source type="image/webp" srcset="img/files/gallery-barbershop-desktop@1x.webp 1x">
@@ -232,9 +248,11 @@
               </li>
               <li class="gallery__item product">
                 <div class="product__content">
-                  <h3 class="product__title">Mishka</h3>
-                  <p class="product__description">Интернет-магазин вязаных игрушек</p>
-                  <a href="#" class="btn product__link">9 900 руб.</a>
+                  <a class="product__link product__link--title" href="#">
+                    <h3 class="product__title">Mishka</h3>
+                  </a>
+                  <p class="product__description product__description--mishka">Интернет-магазин вязаных игрушек</p>
+                  <a class="btn product__link product__link--cost" href="#">9 900 руб.</a>
                 </div>
                 <picture>
                   <source type="image/webp" srcset="img/files/gallery-mishka-desktop@1x.webp 1x">
@@ -244,9 +262,11 @@
               </li>
               <li class="gallery__item product">
                 <div class="product__content">
-                  <h3 class="product__title">A Plus</h3>
-                  <p class="product__description">Лендинг курсов повышения квалификации</p>
-                  <a href="#" class="btn product__link">9 900 руб.</a>
+                  <a class="product__link product__link--title" href="#">
+                    <h3 class="product__title">A Plus</h3>
+                  </a>
+                  <p class="product__description product__description--aplus">Лендинг курсов повышения квалификации</p>
+                  <a class="btn product__link product__link--cost" href="#">9 900 руб.</a>
                 </div>
                 <picture>
                   <source type="image/webp" srcset="img/files/gallery-aplus-desktop@1x.webp 1x">
@@ -256,9 +276,12 @@
               </li>
               <li class="gallery__item product">
                 <div class="product__content">
-                  <h3 class="product__title">Кваст</h3>
-                  <p class="product__description">Промо-сайт производителя крафтового кваса</p>
-                  <a href="#" class="btn product__link">9 900 руб.</a>
+                  <a class="product__link product__link--title" href="#">
+                    <h3 class="product__title">Кваст</h3>
+                  </a>
+                  <p class="product__description product__description--kvast">Промо-сайт производителя крафтового кваса
+                  </p>
+                  <a class="btn product__link product__link--cost" href="#">9 900 руб.</a>
                 </div>
                 <picture>
                   <source type="image/webp" srcset="img/files/gallery-kvast-desktop@1x.webp 1x">
@@ -296,31 +319,26 @@
     <section class="contacts" aria-labelledby="contacts">
       <h2 id="contacts" class="visually-hidden">Наши контакты и координаты</h2>
       <div class="contacts__map">
-        <a href="https://www.google.com/maps/place/%D0%91%D0%BE%D0%BB%D1%8C%D1%88%D0%B0%D1%8F+%D0%9A%D0%BE%D0%BD%D1%8E%D1%88%D0%B5%D0%BD%D0%BD%D0%B0%D1%8F+%D1%83%D0%BB.,+19%2F8,+%D0%A1%D0%B0%D0%BD%D0%BA%D1%82-%D0%9F%D0%B5%D1%82%D0%B5%D1%80%D0%B1%D1%83%D1%80%D0%B3,+%D0%A0%D0%BE%D1%81%D1%81%D0%B8%D1%8F,+191186/@59.9387165,30.3208587,17z/data=!3m1!4b1!4m5!3m4!1s0x4696310fca145cc1:0x42b32648d8238007!8m2!3d59.9387165!4d30.3230474"
-          target="_blank" rel="noreferrer">
-          <picture>
-            <source type="image/webp" srcset="img/files/map-desktop@1x.webp 1x">
-            <img src="img/files/map-desktop@1x.png" aria-hidden="true" alt="" width="1440" height="416">
-          </picture>
-        </a>
+        <picture>
+          <source type="image/webp" srcset="img/files/map-desktop@1x.webp 1x">
+          <img src="img/files/map-desktop@1x.png" aria-hidden="true" alt="" width="1440" height="416">
+        </picture>
       </div>
-      <div class="container">
-        <div itemscope itemtype="http://schema.org/Organization" class="contacts__content">
-          <h3 itemprop="name" class="contacts__title">Nёrds Design Studio</h3>
-          <div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress"
-            class="contacts__field contacts__field--address">
-            <div>
-              <span itemprop="postalCode">191186</span><span>, </span>
-              <span itemprop="addressLocality">Санкт-Петербург</span><span>, </span>
-            </div>
-            <span itemprop="streetAddress">ул. Б. Конюшенная, д. 19/8</span>
+      <div itemscope itemtype="http://schema.org/Organization" class="contacts__content">
+        <h3 itemprop="name" class="contacts__title">Nёrds Design Studio</h3>
+        <div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress"
+          class="contacts__field contacts__field--address">
+          <div>
+            <span itemprop="postalCode">191186</span><span>, </span>
+            <span itemprop="addressLocality">Санкт-Петербург</span><span>, </span>
           </div>
-          <div class="contacts__field contacts__field--tel">
-            <span>тел.</span>
-            <span itemprop="telephone">+7 (812) 275-75-75</span>
-          </div>
-          <a class="contacts__btn btn btn--red" href="mailto:name@email.com">Напишите нам</a>
+          <span itemprop="streetAddress">ул. Б. Конюшенная, д. 19/8</span>
         </div>
+        <div class="contacts__field contacts__field--tel">
+          <span>тел.</span>
+          <span itemprop="telephone">+7 (812) 275-75-75</span>
+        </div>
+        <a class="contacts__btn btn" href="mailto:name@email.com">Напишите нам</a>
       </div>
     </section>
     <!-- /.contacts -->
@@ -329,14 +347,14 @@
       <div class="footer__wrapper">
         <ul class="social">
           <li class="social__item">
-            <a href="https://vk.com/" class="social__link" aria-label="ВКонтакте" target="_blank" rel="noreferrer">
+            <a class="social__link" href="https://vk.com/" aria-label="ВКонтакте" target="_blank" rel="noreferrer">
               <svg role="img" aria-hidden="true" width="26" height="15">
                 <use xlink:href="#icon-vk" x="0" y="0"></use>
               </svg>
             </a>
           </li>
           <li class="social__item">
-            <a href="https://www.facebook.com/" class="social__link" aria-label="Фейсбук" target="_blank"
+            <a class="social__link" href="https://www.facebook.com/" aria-label="Фейсбук" target="_blank"
               rel="noreferrer">
               <svg role="img" aria-hidden="true" width="12" height="22">
                 <use xlink:href="#icon-fb" x="0" y="0"></use>
@@ -344,7 +362,7 @@
             </a>
           </li>
           <li class="social__item">
-            <a href="https://www.instagram.com/" class="social__link" aria-label="Инстаграм" target="_blank"
+            <a class="social__link" href="https://www.instagram.com/" aria-label="Инстаграм" target="_blank"
               rel="noreferrer">
               <svg role="img" aria-hidden="true" width="21" height="21">
                 <use xlink:href="#icon-insta" x="0" y="0"></use>
@@ -379,7 +397,7 @@
       <p class="modal__layout modal__layout--whole">
         <label for="index-form-letter" class="modal__label">Текст письма:</label>
         <textarea class="modal__input modal__input--textarea" id="index-form-letter" name="question"
-          placeholder="В свободной форме" autocomplete="on" required></textarea>
+          placeholder="В свободной форме" autocomplete="on"></textarea>
       </p>
       <button class="btn-res btn modal__btn" type="submit">Отправить</button>
     </form>
@@ -395,7 +413,7 @@
   <!-- /.modal-overlay -->
 
   <script src="js/swiper.min.js"></script>
-  <script src="js/script.js"></script>
+  <script src="js/script.min.js"></script>
 </body>
 
 </html>
