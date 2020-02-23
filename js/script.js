@@ -54,15 +54,16 @@ function openPopup() {
 function setFocus(storageObj) {
   if (storageObj.name) {
     fieldName.value = storageObj.name;
-    fieldEmail.focus();
+
+    if (storageObj.email) {
+      fieldEmail.value = storageObj.email;
+      fieldTextarea.focus();
+    } else {
+      fieldEmail.focus();
+    }
+
   } else {
     fieldName.focus();
-  }
-  if (storageObj.email) {
-    fieldEmail.value = storageObj.email;
-    fieldTextarea.focus();
-  } else {
-    fieldEmail.focus();
   }
 }
 
